@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+
+# Root path redirect to German (default)
+/  /de/  302
+
