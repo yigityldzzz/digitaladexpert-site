@@ -10,45 +10,72 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { primary: '#06b6d4', secondary: '#8b5cf6', accent: '#10b981', dark: { 900: '#0a0a0f', 800: '#12121a' } }
+                    colors: {
+                        primary: '#06b6d4',
+                        secondary: '#8b5cf6',
+                        dark: { 900: '#0a0a0f' }
+                    }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e2e8f0; }
-        h1 { font-family: 'Space Grotesk', sans-serif; }
+        body { font-family: system-ui, sans-serif; background: #0a0a0f; color: white; }
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .neon-text { text-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+        .gradient-text { background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
-<link rel="canonical" href="https://digitaladexpert.de" />
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 bg-[url('https://digitaladexpert.de/assets/grid.svg')] bg-cover">
-    <div class="glass p-12 rounded-3xl text-center max-w-3xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary"></div>
+<body class="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+    
+    <!-- Background Blobs -->
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -z-10"></div>
+
+    <div class="glass max-w-lg w-full p-8 md:p-12 rounded-3xl text-center">
+        <h1 class="text-8xl font-bold gradient-text mb-4">404</h1>
         
-        <h1 class="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-8 neon-text">404</h1>
+        <!-- Dynamic Content -->
+        <h2 id="title" class="text-2xl md:text-3xl font-bold text-white mb-4">Page Not Found</h2>
+        <p id="desc" class="text-gray-400 mb-8">The page you are looking for might have been removed or is temporarily unavailable.</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            <div class="px-2">
-                <h3 class="text-xl font-bold text-white mb-2">Seite nicht gefunden</h3>
-                <p class="text-sm text-gray-400">Der gesuchte Link existiert nicht.</p>
-                <a href="/de/" class="mt-4 inline-block text-primary hover:text-white transition">Zur Startseite →</a>
-            </div>
-            <div class="px-2 pt-4 md:pt-0">
-                <h3 class="text-xl font-bold text-white mb-2">Page Not Found</h3>
-                <p class="text-sm text-gray-400">The link you followed is broken.</p>
-                <a href="/en/" class="mt-4 inline-block text-primary hover:text-white transition">Go Home →</a>
-            </div>
-            <div class="px-2 pt-4 md:pt-0">
-                <h3 class="text-xl font-bold text-white mb-2">Sayfa Bulunamadı</h3>
-                <p class="text-sm text-gray-400">Aradığınız sayfa mevcut değil.</p>
-                <a href="/tr/" class="mt-4 inline-block text-primary hover:text-white transition">Ana Sayfaya Dön →</a>
-            </div>
-        </div>
-        
-        <p class="text-xs text-gray-600 mt-8">Error Code: 404_NOT_FOUND</p>
+        <a id="btn" href="/" class="inline-block bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition-colors">
+            Go Home
+        </a>
     </div>
+
+    <script>
+        const translations = {
+            de: {
+                title: "Seite nicht gefunden",
+                desc: "Die gesuchte Seite wurde möglicherweise entfernt oder ist vorübergehend nicht verfügbar.",
+                btn: "Zur Startseite",
+                link: "/de/"
+            },
+            tr: {
+                title: "Sayfa Bulunamadı",
+                desc: "Aradığınız sayfa silinmiş veya taşınmış olabilir.",
+                btn: "Ana Sayfaya Dön",
+                link: "/tr/"
+            },
+            en: {
+                title: "Page Not Found",
+                desc: "The page you are looking for might have been removed or is temporarily unavailable.",
+                btn: "Go Home",
+                link: "/en/"
+            }
+        };
+
+        // Detect Language
+        const browserLang = navigator.language.split('-')[0];
+        const lang = translations[browserLang] ? browserLang : 'en';
+        const t = translations[lang];
+
+        // Apply Texts
+        document.getElementById('title').innerText = t.title;
+        document.getElementById('desc').innerText = t.desc;
+        document.getElementById('btn').innerText = t.btn;
+        document.getElementById('btn').href = t.link;
+        document.title = `404 - ${t.title} | Digital Ad Expert`;
+    </script>
 </body>
 </html>
