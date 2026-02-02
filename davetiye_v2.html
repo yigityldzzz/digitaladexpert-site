@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G & Y | Nişan Daveti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-gold: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --text-color: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
+        }
+
+        /* Golden Particles Background */
+        .particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(#bf953f 1px, transparent 1px),
+                radial-gradient(#fcf6ba 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+            opacity: 0.1;
+            animation: moveBackground 60s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            from { background-position: 0 0, 25px 25px; }
+            to { background-position: 1000px 1000px, 1025px 1025px; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 450px;
+            border: 1px solid rgba(191, 149, 63, 0.3);
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
+
+        /* Decor Lines */
+        .container::before, .container::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgba(191, 149, 63, 0.6);
+            transition: all 1s ease;
+        }
+
+        .container::before {
+            top: -10px; left: -10px;
+            border-right: none; border-bottom: none;
+        }
+
+        .container::after {
+            bottom: -10px; right: -10px;
+            border-left: none; border-top: none;
+        }
+
+        .intro {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 0.7rem;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .names {
+            font-family: 'Italiana', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            background: var(--accent-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+
+        .names span {
+            display: block;
+            font-size: 1.5rem; /* The '&' symbol */
+            margin: 0.5rem 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #666;
+            -webkit-text-fill-color: #666; /* Reset gradient for & */
+        }
+
+        .details {
+            margin-top: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            line-height: 2;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem 0;
+        }
+
+        .date { font-size: 1.2rem; color: #fff; }
+        .location { font-size: 0.9rem; color: #aaa; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 15px 40px;
+            border: 1px solid #bf953f;
+            color: #bf953f;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #bf953f;
+            color: #000;
+            box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
+</head>
+<body>
+
+    <div class="particles"></div>
+
+    <div class="container">
+        <div class="intro">Save The Date</div>
+        
+        <div class="names">
+            GÜLİSTAN
+            <span>&</span>
+            YİGİT
+        </div>
+
+        <div class="details">
+            <div class="date">30 . 08 . 2026</div>
+            <div class="location">SECRET GARDEN, ISTANBUL</div>
+        </div>
+
+        <a href="#" class="btn">LCV & Konum</a>
+    </div>
+
+</body>
+</html>

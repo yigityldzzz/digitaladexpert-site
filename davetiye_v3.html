@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gülistan & Yiğit | Davetiye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F7F2; /* Krem / Off-white */
+            --accent-color: #586657; /* Sage Green / Haki Yeşili - Resimdeki ton */
+            --text-color: #3A403A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Cormorant Garamond', serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .card-container {
+            position: relative;
+            width: 90%;
+            max-width: 450px;
+            height: 90vh;
+            max-height: 800px;
+            background: #fff;
+            border-radius: 200px 200px 0 0; /* Arch Shape */
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(88, 102, 87, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: enterScene 1.5s ease-out forwards;
+        }
+
+        /* Inner Border Line (Double Line Effect) */
+        .card-container::before {
+            content: '';
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border-radius: 190px 190px 0 0;
+            border: 1px solid var(--accent-color);
+            pointer-events: none;
+        }
+
+        /* Leaves Decoration (SVG) */
+        .leaf-top-left {
+            position: absolute;
+            top: 40px; left: -10px;
+            width: 100px;
+            transform: rotate(-10deg);
+            opacity: 0.8;
+            animation: sway 4s ease-in-out infinite alternate;
+        }
+
+        .leaf-top-right {
+            position: absolute;
+            top: 40px; right: -10px;
+            width: 100px;
+            transform: scaleX(-1) rotate(-10deg);
+            opacity: 0.8;
+            animation: sway 4s ease-in-out infinite alternate-reverse;
+        }
+
+        /* Monogram */
+        .monogram {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            font-weight: 300;
+        }
+
+        /* Names */
+        .names {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-color);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .ampersand {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 2rem;
+            display: block;
+            margin: 0.2rem 0;
+            color: #8da38b;
+        }
+
+        /* Text */
+        .invite-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.8;
+            margin: 2rem 0;
+            color: #666;
+            max-width: 80%;
+        }
+
+        .date-block {
+            margin: 2rem 0;
+        }
+
+        .date {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .time {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .venue {
+            margin-top: auto;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .venue-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes enterScene {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes sway {
+            from { transform: rotate(-10deg); }
+            to { transform: rotate(-5deg); }
+        }
+
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
+</head>
+<body>
+
+    <div class="card-container">
+        
+        <!-- SVG Leaves -->
+        <svg class="leaf-top-left" viewBox="0 0 100 100" fill="none" stroke="#586657" stroke-width="1">
+            <path d="M50,100 Q40,60 10,40 M50,100 Q60,60 90,30 M50,100 Q50,50 50,10" />
+            <ellipse cx="10" cy="40" rx="5" ry="10" transform="rotate(-30 10 40)" fill="#586657" fill-opacity="0.1"/>
+            <ellipse cx="90" cy="30" rx="5" ry="10" transform="rotate(30 90 30)" fill="#586657" fill-opacity="0.1"/>
+            <ellipse cx="50" cy="10" rx="5" ry="10" fill="#586657" fill-opacity="0.1"/>
+        </svg>
+
+        <svg class="leaf-top-right" viewBox="0 0 100 100" fill="none" stroke="#586657" stroke-width="1">
+             <path d="M50,100 Q40,60 10,40 M50,100 Q60,60 90,30 M50,100 Q50,50 50,10" />
+            <ellipse cx="10" cy="40" rx="5" ry="10" transform="rotate(-30 10 40)" fill="#586657" fill-opacity="0.1"/>
+            <ellipse cx="90" cy="30" rx="5" ry="10" transform="rotate(30 90 30)" fill="#586657" fill-opacity="0.1"/>
+            <ellipse cx="50" cy="10" rx="5" ry="10" fill="#586657" fill-opacity="0.1"/>
+        </svg>
+
+        <div class="monogram">G | Y</div>
+
+        <div class="names">
+            GÜLİSTAN
+            <span class="ampersand">&</span>
+            YİĞİT
+        </div>
+
+        <p class="invite-text">
+            Bu özel günümüzde sizleri de<br>
+            aramızda görmekten mutluluk<br>
+            duyarız
+        </p>
+
+        <div class="date-block">
+            <div class="date">23 AĞUSTOS 2026</div>
+            <div class="time">19.00</div>
+        </div>
+
+        <div class="venue">
+            <div class="venue-name">Rengin Davet Evi</div>
+            Kemalpaşa Mh. Şehit Alım Yılmaz Caddesi<br>
+            No: 123-A
+        </div>
+
+    </div>
+
+</body>
+</html>
