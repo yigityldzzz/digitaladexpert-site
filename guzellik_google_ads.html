@@ -15,6 +15,16 @@
         .btn-beauty { background: #db2777; color: white; border-radius: 50px; transition: all 0.3s; }
         .btn-beauty:hover { background: #be185d; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(219, 39, 119, 0.2); }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
 </head>
 <body>
     <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-100">
@@ -58,6 +68,7 @@
             <div class="bg-white p-10 rounded-3xl shadow-xl shadow-pink-100">
                 <h2 class="text-3xl text-center mb-8 font-serif italic text-gray-800">Güzelliğinizi Duyuralım</h2>
                 <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-5">
+    <input type="hidden" name="_next" value="https://digitaladexpert.de/thanks.html">
                     <input type="text" name="name" placeholder="Salon İsmi / Adınız" class="w-full p-4 bg-pink-50/50 rounded-xl border-none focus:ring-2 focus:ring-pink-200 outline-none">
                     <input type="text" name="phone" placeholder="Telefon" class="w-full p-4 bg-pink-50/50 rounded-xl border-none focus:ring-2 focus:ring-pink-200 outline-none">
                     <button class="w-full btn-beauty p-4 text-lg">Hemen Başlayalım</button>

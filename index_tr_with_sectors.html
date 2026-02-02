@@ -95,6 +95,16 @@
         .mobile-menu.open { transform: translateX(0); }
         @media (max-width: 640px) { button, a { min-height: 44px; } input, textarea, select { font-size: 16px !important; } }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
 </head>
 <body class="gradient-bg min-h-screen">
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
@@ -388,6 +398,7 @@
                         </div>
                     </div>
                     <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-4 sm:space-y-6">
+    <input type="hidden" name="_next" value="https://digitaladexpert.de/thanks.html">
                         <div><input type="text" name="name" placeholder="Adınız" required class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-base"></div>
                         <div><input type="email" name="email" placeholder="E-postanız" required class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-base"></div>
                         <div><textarea name="message" placeholder="Mesajınız" rows="4" required class="w-full px-4 sm:px-5 py-3 sm:py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none text-base"></textarea></div>

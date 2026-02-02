@@ -14,6 +14,16 @@
         .hero-bg { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop'); bg-size: cover; bg-position: center; }
         .accent-text { color: #ef4444; }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
 </head>
 <body>
     <header class="fixed w-full z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
@@ -65,6 +75,7 @@
         <div class="container mx-auto px-6 max-w-xl text-center">
             <h2 class="text-3xl font-bold text-white mb-8">Menüde Başarı Var</h2>
             <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-4 text-left">
+    <input type="hidden" name="_next" value="https://digitaladexpert.de/thanks.html">
                 <input type="text" name="name" placeholder="Restoran Adı" class="w-full p-4 bg-[#222] text-white rounded-lg border border-[#333] focus:border-red-500 outline-none">
                 <input type="text" name="phone" placeholder="Telefon" class="w-full p-4 bg-[#222] text-white rounded-lg border border-[#333] focus:border-red-500 outline-none">
                 <button class="w-full bg-red-600 text-white p-4 rounded-lg font-bold hover:bg-red-700">Görüşme Başlat</button>

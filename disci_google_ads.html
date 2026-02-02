@@ -13,6 +13,16 @@
         .hero-bg { background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); }
         .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
     </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910536535"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17910536535');
+</script>
+
 </head>
 <body>
     <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
@@ -69,6 +79,7 @@
             <div class="bg-white p-8 rounded-2xl shadow-xl">
                 <h2 class="text-2xl font-bold mb-6 text-center">Hasta Sayınızı Artırın</h2>
                 <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-4">
+    <input type="hidden" name="_next" value="https://digitaladexpert.de/thanks.html">
                     <input type="text" name="name" placeholder="Doktor Adı / Klinik Adı" class="w-full p-4 bg-gray-50 rounded-lg border focus:border-blue-500 outline-none">
                     <input type="text" name="phone" placeholder="Telefon" class="w-full p-4 bg-gray-50 rounded-lg border focus:border-blue-500 outline-none">
                     <button class="w-full bg-blue-600 text-white p-4 rounded-lg font-bold hover:bg-blue-700">Analiz Talep Et</button>
