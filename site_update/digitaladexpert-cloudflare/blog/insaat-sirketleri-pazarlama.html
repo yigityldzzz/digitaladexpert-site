@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk İnşaat Şirketleri İçin Markalaşma | Digital Ad Expert</title>
+    <meta name="description" content="Büyük proje bulma taktikleri.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#06b6d4',
+                        secondary: '#8b5cf6',
+                        accent: '#10b981',
+                        dark: { 900: '#0a0a0f', 800: '#12121a' }
+                    },
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: '#e2e8f0',
+                                h1: { color: '#fff' },
+                                h2: { color: '#fff' },
+                                h3: { color: '#fff' },
+                                strong: { color: '#fff' },
+                                a: { color: '#06b6d4', '&:hover': { color: '#8b5cf6' } },
+                                ul: { listStyleType: 'disc', paddingLeft: '1.5em' },
+                                li: { marginBottom: '0.5em' },
+                            },
+                        },
+                    }),
+                }
+            },
+            plugins: [
+                require('@tailwindcss/typography'),
+            ],
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e2e8f0; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .gradient-bg { background: linear-gradient(-45deg, #0a0a0f, #1a1a2e, #16213e, #0f3460); background-size: 400% 400%; animation: gradient 15s ease infinite; }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: white; }
+        .prose p { margin-bottom: 1.2rem; line-height: 1.7; color: #cbd5e1; }
+        .prose ul { margin-bottom: 1.5rem; list-style-type: disc; padding-left: 1.5rem; color: #cbd5e1; }
+        .prose li { margin-bottom: 0.5rem; }
+        .prose strong { color: white; font-weight: 600; }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex flex-col">
+
+    <header class="fixed top-0 w-full z-50 glass">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/tr/" class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Digital Ad Expert</a>
+            <a href="/blog/" class="text-sm text-gray-400 hover:text-white transition">← Blog</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-32 pb-20 px-4">
+        <article class="container mx-auto max-w-3xl">
+            <div class="mb-10 text-center">
+                <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">İnşaat</span>
+                <h1 class="text-3xl md:text-5xl font-bold text-white mt-4 mb-6 leading-tight">Alman Pazarında Türk İnşaat Şirketleri Nasıl Markalaşır?</h1>
+                <div class="flex items-center justify-center gap-4 text-sm text-gray-400">
+                    <span>📅 13.02.2026</span>
+                    <span>⏱️ 4 min read</span>
+                </div>
+            </div>
+            
+            <div class="glass p-8 md:p-12 rounded-3xl prose">
+                <p>Mevcut içerik...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h2>Warum ist das wichtig?</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+            </div>
+
+            <div class="mt-12 p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 text-center">
+                <h3 class="text-xl font-bold text-white mb-2">Büyük Projeler</h3>
+                <p class="text-gray-400 mb-6">İnşaat paketi</p>
+                <a href="/tr/tadilat_google_ads.html" class="inline-block bg-white text-black px-6 py-3 rounded-xl font-bold hover:bg-gray-200 transition">İncele</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-8 text-center text-gray-500 border-t border-white/10">
+        <p>© 2025 Digital Ad Expert</p>
+    </footer>
+</body>
+</html>
