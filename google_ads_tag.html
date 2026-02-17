@@ -1,9 +1,16 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910543951"></script>
+<!-- Google tag (gtag.js) - Optimized Load -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17910543951');
+  
+  // Defer loading of GTAG
+  window.addEventListener('load', function() {
+    var script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-17910543951";
+    script.async = true;
+    document.head.appendChild(script);
+    
+    gtag('js', new Date());
+    gtag('config', 'AW-17910543951');
+  });
 </script>
