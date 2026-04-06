@@ -13,7 +13,7 @@ popup_tr = """
             <p class="text-gray-400 text-sm">Almanya pazarında rakiplerinizin Google Ads ve Web Tasarımda yaptığı 5 büyük hatayı ve çözümünü içeren 2026 rehberimizi ücretsiz indirin.</p>
         </div>
         <!-- Formspree Endpoint -->
-        <form action="https://formspree.io/f/mwkgypzw" method="POST" class="space-y-4">
+        <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-4">
             <input type="text" name="name" placeholder="Adınız" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition">
             <input type="email" name="email" placeholder="E-posta Adresiniz" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition">
             <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 rounded-xl hover:opacity-90 transition shadow-lg shadow-primary/30">Rehberi Mailime Gönder</button>
@@ -69,7 +69,7 @@ popup_de = """
             <p class="text-gray-400 text-sm">Vermeiden Sie die 5 größten Google Ads Fehler, an denen die meisten KMUs scheitern. Laden Sie unsere 2026 Checkliste jetzt kostenlos herunter.</p>
         </div>
         <!-- Formspree Endpoint -->
-        <form action="https://formspree.io/f/mwkgypzw" method="POST" class="space-y-4">
+        <form action="https://formspree.io/f/xqeqgrpg" method="POST" class="space-y-4">
             <input type="text" name="name" placeholder="Ihr Name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition">
             <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary transition">
             <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 rounded-xl hover:opacity-90 transition shadow-lg shadow-primary/30">Checkliste jetzt anfordern</button>
