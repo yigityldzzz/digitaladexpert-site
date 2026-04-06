@@ -2,6 +2,22 @@
 <html lang="de">
 <head>
 
+    <!-- Auto-Routing based on Browser Language -->
+    <script>
+    (function() {
+        try {
+            if (!localStorage.getItem('langRouted')) {
+                localStorage.setItem('langRouted', 'true');
+                var lang = navigator.language || navigator.userLanguage;
+                if (lang && lang.toLowerCase().startsWith('de')) {
+                    window.location.replace('/de/index.html');
+                }
+            }
+        } catch(e) {}
+    })();
+    </script>
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910543951"></script>
 <script>

@@ -398,6 +398,52 @@
         </div>
     </section>
 
+    
+    <!-- Trust Signals Banner -->
+    <style>
+    @keyframes scroll-trust {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .trust-scroll-container {
+        animation: scroll-trust 30s linear infinite;
+        display: flex;
+        width: max-content;
+    }
+    .trust-badge-item {
+        display: flex; align-items: center; gap: 0.75rem;
+        background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+        padding: 0.75rem 2rem; border-radius: 9999px; margin: 0 1rem;
+        color: #94a3b8; font-weight: 600; white-space: nowrap; font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .trust-badge-item:hover {
+        background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+    </style>
+    <div class="w-full overflow-hidden border-y border-white/5 py-6 relative" style="background: rgba(15,23,42,0.8); backdrop-filter: blur(10px);">
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0f172a] to-transparent z-10 pointer-events-none"></div>
+        <div class="trust-scroll-container hover:[animation-play-state:paused]">
+            <!-- Set 1 -->
+            <div class="trust-badge-item"><i class="fa-brands fa-google text-[#4285F4] text-xl"></i> Google Partner (Certified)</div>
+            <div class="trust-badge-item"><i class="fa-brands fa-meta text-[#0668E1] text-xl"></i> Meta Business Expert</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-chart-line text-accent text-xl"></i> €10M+ Ad Spend Managed</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-shield-halved text-secondary text-xl"></i> GDPR Compliant Data</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-ranking-star text-yellow-500 text-xl"></i> Top Rated SEO Agency</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-handshake-angle text-primary text-xl"></i> DACH Market Specialists</div>
+            <!-- Set 2 -->
+            <div class="trust-badge-item"><i class="fa-brands fa-google text-[#4285F4] text-xl"></i> Google Partner (Certified)</div>
+            <div class="trust-badge-item"><i class="fa-brands fa-meta text-[#0668E1] text-xl"></i> Meta Business Expert</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-chart-line text-accent text-xl"></i> €10M+ Ad Spend Managed</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-shield-halved text-secondary text-xl"></i> GDPR Compliant Data</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-ranking-star text-yellow-500 text-xl"></i> Top Rated SEO Agency</div>
+            <div class="trust-badge-item"><i class="fa-solid fa-handshake-angle text-primary text-xl"></i> DACH Market Specialists</div>
+        </div>
+    </div>
+
     <!-- Stats Section -->
     <section class="py-12 sm:py-20 relative">
         <div class="container mx-auto px-4 max-w-6xl">
