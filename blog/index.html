@@ -1,500 +1,691 @@
 <!DOCTYPE html>
 <html lang="de" class="dark">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910543951"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17910543951');
-</script>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5LP3YD04Z"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-R5LP3YD04Z');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Kaynaklar | Digital Ad Expert</title>
-    <meta name="description" content="Dijital pazarlama, SEO ve Google Ads hakkında güncel bilgiler, rehberler ve ipuçları.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#06b6d4',
-                        secondary: '#8b5cf6',
-                        accent: '#10b981',
-                        dark: { 900: '#0a0a0f', 800: '#12121a' }
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e2e8f0; }
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
-        .gradient-bg { background: linear-gradient(-45deg, #0a0a0f, #1a1a2e, #16213e, #0f3460); background-size: 400% 400%; animation: gradient 15s ease infinite; }
-        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .card-hover:hover { transform: translateY(-5px); border-color: rgba(6, 182, 212, 0.5); }
-    </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R5LP3YD04Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R5LP3YD04Z');gtag('config','AW-17910543951');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog & Wissensportal | Digital Ad Expert</title>
+<meta name="description" content="Praxistipps zu Google Ads, SEO, Meta Ads und digitalem Marketing für Unternehmen in Deutschland. Artikel auf Deutsch, Türkisch und Englisch.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://digitaladexpert.de/blog/" />
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8641074364970025"
-     crossorigin="anonymous"></script>
-
+<meta property="og:title" content="Blog & Wissensportal | Digital Ad Expert" />
+<meta property="og:description" content="Google Ads, SEO und Marketing-Strategien für KMU in Deutschland." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://digitaladexpert.de/blog/" />
+<meta property="og:image" content="https://digitaladexpert.de/assets/og-image.png" />
+<link rel="alternate" hreflang="de" href="https://digitaladexpert.de/de/" />
+<link rel="alternate" hreflang="tr" href="https://digitaladexpert.de/tr/" />
+<link rel="alternate" hreflang="en" href="https://digitaladexpert.de/en/" />
+<link rel="alternate" hreflang="x-default" href="https://digitaladexpert.de/" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#06b6d4',secondary:'#8b5cf6',accent:'#10b981',dark:{900:'#0a0a0f',800:'#12121a',700:'#1a1a24'}}}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:'Inter',sans-serif;background:#0a0a0f;color:#e2e8f0;overflow-x:hidden;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+  .gradient-bg{background:linear-gradient(-45deg,#0a0a0f,#1a1a2e,#16213e,#0f3460);background-size:400% 400%;animation:gradientAnim 15s ease infinite;}
+  @keyframes gradientAnim{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.1);}
+  .gradient-text{background:linear-gradient(135deg,#06b6d4 0%,#8b5cf6 50%,#10b981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .card{transition:all .3s ease;border:1px solid rgba(255,255,255,0.08);}
+  .card:hover{transform:translateY(-4px);border-color:rgba(6,182,212,0.4);background:rgba(255,255,255,0.08);}
+  .filter-btn{transition:all .2s ease;border:1px solid rgba(255,255,255,0.15);cursor:pointer;}
+  .filter-btn.active{background:linear-gradient(135deg,#06b6d4,#8b5cf6);border-color:transparent;color:#fff;}
+  .filter-btn:not(.active):hover{border-color:rgba(6,182,212,0.5);color:#06b6d4;}
+  .article-card.hidden{display:none;}
+  .lang-de{background:rgba(6,182,212,0.15);color:#06b6d4;}
+  .lang-tr{background:rgba(239,68,68,0.15);color:#f87171;}
+  .lang-en{background:rgba(16,185,129,0.15);color:#34d399;}
+  ::-webkit-scrollbar{width:5px;}
+  ::-webkit-scrollbar-track{background:#0a0a0f;}
+  ::-webkit-scrollbar-thumb{background:#06b6d4;border-radius:4px;}
+  #no-results{display:none;}
+  .count-badge{background:rgba(255,255,255,0.1);font-size:.7rem;padding:.1rem .45rem;border-radius:999px;margin-left:.3rem;}
+  @media(max-width:640px){.card:hover{transform:none;}}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8641074364970025" crossorigin="anonymous"></script>
 </head>
+
 <body class="gradient-bg min-h-screen flex flex-col">
 
-    <header class="fixed top-0 w-full z-50 glass">
-        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/tr/" class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Digital Ad Expert</a>
-            <div class="flex gap-4">
-                <a href="/tr/" class="text-sm text-gray-300 hover:text-white transition">TR</a>
-                <a href="/de/" class="text-sm text-gray-300 hover:text-white transition">DE</a>
-                <a href="/en/" class="text-sm text-gray-300 hover:text-white transition">EN</a>
-            </div>
-        </div>
-    </header>
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 glass">
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="/de/" class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Digital Ad Expert</a>
+    <nav class="flex items-center gap-3 sm:gap-5">
+      <a href="/de/" class="text-sm text-gray-300 hover:text-white transition hidden sm:inline">← Ana Sayfa</a>
+      <a href="/de/" class="text-sm text-gray-400 hover:text-white transition">DE</a>
+      <a href="/tr/" class="text-sm text-gray-400 hover:text-white transition">TR</a>
+      <a href="/en/" class="text-sm text-gray-400 hover:text-white transition">EN</a>
+    </nav>
+  </div>
+</header>
 
-    <main class="flex-grow pt-32 pb-20 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Blog & Bilgi Merkezi</h1>
-                <p class="text-xl text-gray-400">Dijital büyüme için stratejiler ve rehberler.</p>
-            </div>
+<!-- HERO -->
+<section class="pt-32 pb-10 px-4 text-center">
+  <div class="container mx-auto max-w-3xl">
+    <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Wissen & Strategie</span>
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Blog & <span class="gradient-text">Wissensportal</span></h1>
+    <p class="text-gray-400 text-lg mb-8">Praxistipps zu Google Ads, SEO und Performance Marketing — auf Deutsch 🇩🇪, Türkisch 🇹🇷 und Englisch 🇬🇧</p>
+    <!-- Search -->
+    <div class="relative max-w-md mx-auto">
+      <input id="search-input" type="text" placeholder="Artikel suchen / Makale ara..."
+        class="w-full glass rounded-xl px-5 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary border border-white/10 transition text-sm">
+      <span class="absolute right-4 top-3.5 text-gray-500 text-sm">🔍</span>
+    </div>
+  </div>
+</section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- CATEGORY FILTER -->
+<section class="pb-8 px-4 sticky top-16 z-40" style="background:rgba(10,10,15,0.85);backdrop-filter:blur(12px);">
+  <div class="container mx-auto max-w-6xl">
+    <div class="flex flex-wrap gap-2 justify-center py-3" id="filter-bar">
+      <button class="filter-btn active px-4 py-2 rounded-xl text-sm font-semibold text-white" data-filter="all">
+        Alle <span class="count-badge" id="count-all"></span>
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold text-gray-300" data-filter="google-ads">
+        Google Ads <span class="count-badge" id="count-google-ads"></span>
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold text-gray-300" data-filter="seo">
+        SEO & Local <span class="count-badge" id="count-seo"></span>
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold text-gray-300" data-filter="social">
+        Social & B2B <span class="count-badge" id="count-social"></span>
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold text-gray-300" data-filter="ki">
+        KI & Web <span class="count-badge" id="count-ki"></span>
+      </button>
+      <button class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold text-gray-300" data-filter="sektor">
+        Sektören <span class="count-badge" id="count-sektor"></span>
+      </button>
+    </div>
+  </div>
+</section>
 
-        <!-- Generated SEO Articles -->
-        <a href="google-ads-pmax-kampanyalari-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">TR - Google Ads</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Google Ads PMax Kampanyaları ile ROI Artırma (2026)</h3>
-            <p class="text-gray-400 text-sm mb-4">2026 yılında Maksimum Performans (PMax) kampanyalarını optimize ederek reklam bütçenizi en iyi şekilde değerlendirin.</p>
-        </a>
+<!-- ARTICLES GRID -->
+<main class="flex-grow px-4 pb-20">
+  <div class="container mx-auto max-w-6xl">
 
-        <a href="pmax-kampagnen-roi-maximieren-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">DE - Google Ads</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Wie PMax-Kampagnen (Google Ads) Ihren ROI 2026 maximieren</h3>
-            <p class="text-gray-400 text-sm mb-4">Optimieren Sie Performance Max (PMax) Kampagnen in 2026 für maximalen Return on Investment (ROI).</p>
-        </a>
+    <div id="no-results" class="text-center py-20 text-gray-500">
+      <p class="text-4xl mb-4">🔍</p>
+      <p class="text-lg">Kein Artikel gefunden / Makale bulunamadı</p>
+    </div>
 
-        <a href="yerel-seo-google-haritalar-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-accent bg-accent/10 rounded-full">TR - SEO</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Yerel İşletmeler İçin Yerel SEO ve Google Haritalar Stratejisi</h3>
-            <p class="text-gray-400 text-sm mb-4">Kuaförler, restoranlar ve doktorlar için 2026 Yerel SEO taktikleri.</p>
-        </a>
+    <div id="articles-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-        <a href="local-seo-google-maps-ranking-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-accent bg-accent/10 rounded-full">DE - SEO</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Local SEO: So dominieren Sie Google Maps in 2026</h3>
-            <p class="text-gray-400 text-sm mb-4">Local SEO Strategien für lokale Unternehmen, Restaurants und Dienstleister.</p>
-        </a>
+      <!-- ======================== GOOGLE ADS ======================== -->
+      <a href="pmax-kampagnen-roi-maximieren-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="PMax-Kampagnen ROI maximieren 2026 Google Ads Performance Max">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">PMax-Kampagnen: ROI maximieren 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Wie Performance Max Kampagnen richtig aufgesetzt und Budget effizient eingesetzt wird.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <a href="yapay-zeka-ile-seo-icerik-uretimi-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full">TR - AI</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Yapay Zeka (AI) Destekli İçerik Üretimi ile SEO'da Öne Geçmek</h3>
-            <p class="text-gray-400 text-sm mb-4">2026 yılında ChatGPT ve Gemini gibi AI araçlarını kullanarak Google uyumlu içerik nasıl üretilir?</p>
-        </a>
+      <a href="google-ads-pmax-kampanyalari-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="tr" data-title="Google Ads PMax Kampanyaları ROI Artırma Performance Max">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">PMax Kampanyaları ile ROI Artırma</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Performance Max kampanyalarını doğru kurmanın ve ROAS artırmanın yolları.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
 
-        <a href="ki-content-erstellung-seo-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full">DE - AI</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">KI-gesteuerte Content-Erstellung: Der SEO-Gamechanger</h3>
-            <p class="text-gray-400 text-sm mb-4">Wie Sie ChatGPT und KI nutzen, um rankende SEO-Texte in 2026 zu erstellen.</p>
-        </a>
+      <a href="google-ads-kosten-2025.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="Google Ads Kosten 2025 Klickpreis Budget CPC">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Google Ads Kosten 2025: Was kostet ein Klick?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Klickpreise, Budgetplanung und Kostensenkung für KMU im DACH-Raum.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <a href="almanya-b2b-lead-generation-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">TR - B2B</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Almanya Pazarında Türk Şirketleri İçin B2B Lead Generation</h3>
-            <p class="text-gray-400 text-sm mb-4">Almanya (DACH) pazarına girmek isteyen Türk şirketleri için B2B müşteri bulma taktikleri.</p>
-        </a>
+      <a href="google-ads-quality-score.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="Google Ads Quality Score Qualitätsfaktor Kosten senken">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Quality Score: Kosten bis 50% senken</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Wie der Qualitätsfaktor Ihre Klickpreise reduziert — und wie Sie ihn verbessern.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <a href="b2b-lead-generierung-dach-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">DE - B2B</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">B2B Lead-Generierung im DACH-Raum: Strategien</h3>
-            <p class="text-gray-400 text-sm mb-4">Erfolgreiche Lead-Generation Strategien für B2B Unternehmen im DACH Markt 2026.</p>
-        </a>
+      <a href="google-ads-vs-seo.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="Google Ads vs SEO Vergleich was ist besser">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Google Ads vs. SEO: Was bringt mehr?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Direkter Vergleich für KMU — wann lohnt sich welche Strategie?</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <a href="meta-ads-trendleri-hedefleme-2026.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full">TR - Meta Ads</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Meta (Facebook/Instagram) Reklamlarında 2026 Trendleri</h3>
-            <p class="text-gray-400 text-sm mb-4">Meta Ads tarafında 2026 yılında başarılı olmak için kullanmanız gereken hedefleme stratejileri.</p>
-        </a>
+      <a href="seo-oder-google-ads.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="SEO oder Google Ads Strategie Guide Entscheidung">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">SEO oder Google Ads? Der Entscheidungsguide</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Welche Kombination für Ihr Unternehmen die richtige ist — mit Entscheidungsmatrix.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <a href="meta-ads-trends-2026-dach.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4"><span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full">DE - Meta Ads</span></div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Meta Ads Trends 2026: Höhere Conversion-Raten</h3>
-            <p class="text-gray-400 text-sm mb-4">Die wichtigsten Meta (Facebook & Instagram) Werbetrends und Strategien für 2026.</p>
-        </a>
+      <a href="dsgvo-google-ads-compliance-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="DSGVO Google Ads Compliance Consent Mode Tracking">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">DSGVO & Google Ads 2026: Was ist erlaubt?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Consent Mode v2, Enhanced Conversions und DSGVO-Compliance einfach erklärt.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
+      <a href="youtube-ads-kmu-deutschland-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="google-ads" data-lang="de" data-title="YouTube Ads KMU Deutschland Video Werbung 2026">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/20 text-primary px-2 py-0.5 rounded-full text-xs font-bold">Google Ads</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">YouTube Ads für KMU 2026: Lohnt es sich?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Video-Werbung für kleine Unternehmen — Kosten, Formate und Targeting erklärt.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <!-- New Article 1 -->
-        <a href="website-musteri-kaciriyor-5-hata.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">Web Design</span>
-                <span class="text-xs text-gray-500">9 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Web Siteniz Müşteri Kaçırıyor Olabilir: 5 Kritik Hata</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Web siteniz güzel görünüyor ama satış yapmıyor mu? İşte ziyaretçilerin sitenizi terk etmesine neden olan 5 kritik hata.</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <!-- ======================== SEO ======================== -->
+      <a href="local-seo-google-maps-ranking-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="de" data-title="Local SEO Google Maps Ranking 2026 Local Pack">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">Google Maps Ranking 2026: So dominieren Sie das Local Pack</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Schritt-für-Schritt: So erscheinen Sie in den Top-3 der Google Maps Ergebnisse.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <!-- New Article 2 -->
-        <a href="ofis-tasima-kurumsal-musteri.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-accent bg-accent/10 rounded-full text-accent">B2B / Nakliyat</span>
-                <span class="text-xs text-gray-500">9 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Ofis Taşıma İşlerinde Kurumsal Müşteri Nasıl Bulunur?</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Evden eve nakliyatın kârı düşük mü? Kurumsal ofis taşıma (Büroumzug) işleri nasıl bulunur? B2B rehberi.</p>
-            <div class="mt-4 flex items-center text-sm text-accent font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <a href="yerel-seo-google-haritalar-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="tr" data-title="Yerel SEO Google Haritalar 2026 local pack sıralama">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">Yerel SEO ve Google Haritalar 2026 Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Yerel işletmeler için Google Haritalar sıralama stratejisi.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
 
-        <!-- New Article 3 -->
-        <a href="dis-klinikleri-google-ads-yasaklari.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full text-secondary">Sağlık / Ads</span>
-                <span class="text-xs text-gray-500">9 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Diş Klinikleri İçin Google Ads Yasakları ve Çözümleri</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Reklamınız "Onaylanmadı" hatası mı veriyor? HWG yasaları, yasak kelimeler ve çözüm yolları.</p>
-            <div class="mt-4 flex items-center text-sm text-secondary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <a href="google-my-business-optimierung-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="de" data-title="Google My Business optimieren 2026 Profil GBP">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">Google My Business optimieren 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Schritt-für-Schritt-Anleitung für mehr Kunden durch ein optimiertes Google Profil.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <!-- New German Article 1 -->
-        <a href="website-kunden-verlieren-5-fehler.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">de / Web Design</span>
-                <span class="text-xs text-gray-500">09.02.2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Warum Ihre Website keine Kunden bringt: 5 Fehler</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Besucher verlassen Ihre Seite sofort? 5 kritische Fehler und wie Sie diese beheben.</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Lesen <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <a href="local-seo-tipps.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="de" data-title="Local SEO Tipps NAP Google Business Bewertungen">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">Local SEO: Die wichtigsten Tipps</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">NAP-Konsistenz, Google Business und Bewertungen — die Grundlagen lokaler Sichtbarkeit.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <!-- New German Article 2 -->
-        <a href="bueroumzug-firmenkunden-finden.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-accent bg-accent/10 rounded-full text-accent">de / B2B</span>
-                <span class="text-xs text-gray-500">09.02.2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Büroumzug: So finden Sie lukrative Firmenkunden</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Weg vom Preiskampf bei Privatumzügen. Marketing-Strategien für B2B Umzüge.</p>
-            <div class="mt-4 flex items-center text-sm text-accent font-medium">
-                Lesen <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <a href="ki-content-erstellung-seo-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="de" data-title="KI Content Erstellung SEO 2026 AI Texte">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">KI-gestützte Content-Erstellung für SEO</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Wie KI-Tools die SEO-Content-Produktion 2026 verändern — und was das für Sie bedeutet.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-        <!-- New German Article 3 -->
-        <a href="zahnarzt-google-ads-hwg-guide.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-secondary bg-secondary/10 rounded-full text-secondary">de / Gesundheit</span>
-                <span class="text-xs text-gray-500">09.02.2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">Google Ads für Zahnärzte: Was ist verboten (HWG)?</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Anzeige abgelehnt? Alles über verbotene Begriffe und das Heilmittelwerbegesetz.</p>
-            <div class="mt-4 flex items-center text-sm text-secondary font-medium">
-                Lesen <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
+      <a href="yapay-zeka-ile-seo-icerik-uretimi-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="seo" data-lang="tr" data-title="Yapay Zeka SEO İçerik Üretimi 2026 AI">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-accent/20 text-accent px-2 py-0.5 rounded-full text-xs font-bold">SEO & Local</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-accent transition leading-snug">Yapay Zeka ile SEO İçerik Üretimi 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">AI destekli içerik üretiminin SEO'ya etkisi ve doğru kullanım stratejileri.</p>
+        <span class="text-accent text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
 
-        <!-- Article Card -->
-        <a href="google-ads-vs-seo.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">Dijital Pazarlama</span>
-                <span class="text-xs text-gray-500">2 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Google Ads vs SEO: Küçük İşletmeler İçin Hangisi Mantıklı?</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Bütçeniz kısıtlıysa hangisine yatırım yapmalısınız? Google Ads (PPC) mi yoksa SEO mu? İşte karar vermenizi sağlayacak rehber.</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
-        
-        <!-- Article Card -->
-        <a href="donerci-ciro-artirma-taktikleri.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">Gastro Marketing</span>
-                <span class="text-xs text-gray-500">2 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Döner Dükkanı Cirosunu %30 Artıran Basit Taktikler</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Dönerci veya Imbiss sahibisiniz ama müşteri sayınız artmıyor mu? İşte Google Haritalar ve basit reklamlarla ciroyu katlama yöntemleri.</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
-        
-        <!-- Article Card -->
-        <a href="insaat-tadilat-musteri-bulma.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">İnşaat & Tadilat</span>
-                <span class="text-xs text-gray-500">2 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Handwerker Marketing: İnşaat İşleri İçin Müşteri Nasıl Bulunur?</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Boya, tadilat, fayans işleri yapıyorsunuz ama işler durgun mu? MyHammer ile uğraşmak yerine kendi müşterinizi nasıl bulursunuz?</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
-        
-        <!-- Article Card -->
-        <a href="guzellik-merkezi-instagram-google-ads.html" class="glass p-6 rounded-2xl hover:bg-white/5 transition-all group block">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full">Güzellik & Estetik</span>
-                <span class="text-xs text-gray-500">2 Şubat 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Güzellik Merkezleri İçin: Instagram mı Google Ads mi?</h3>
-            <p class="text-gray-400 text-sm line-clamp-2">Estetik, Lazer, Botox... Güzellik salonları için hangi platform daha çok müşteri getiriyor? Karşılaştırmalı analiz.</p>
-            <div class="mt-4 flex items-center text-sm text-primary font-medium">
-                Oku <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-        </a>
-        
-    
-    <a href="/blog/umzugsunternehmen-marketing-winter.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Umzug</span>
-            <span class="text-gray-500 text-xs">29.01.2026</span>
+      <!-- ======================== SOCIAL & B2B ======================== -->
+      <a href="meta-ads-trends-2026-dach.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="de" data-title="Meta Ads Trends 2026 DACH Facebook Instagram Werbung">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Keine Aufträge im Winter? 5 Taktiken für Umzugsfirmen</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Wie Umzugsfirmen auch in der Nebensaison Kunden gewinnen.</p>
-    </a>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Meta Ads Trends 2026 im DACH-Raum</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Facebook & Instagram Ads: Was 2026 wirklich funktioniert und was Sie aufgeben sollten.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-    <a href="/blog/umzugskosten-2026-guide.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Ratgeber</span>
-            <span class="text-gray-500 text-xs">29.01.2026</span>
+      <a href="meta-ads-trendleri-hedefleme-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="tr" data-title="Meta Ads Trendleri Hedefleme 2026 Facebook Instagram">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Umzugskosten 2026: Preise & Spartipps für Deutschland</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Was kostet ein Umzug 2026 wirklich? Preistabelle & Tipps.</p>
-    </a>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Meta Ads Trendleri ve Hedefleme 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Facebook ve Instagram reklamlarında 2026 stratejileri ve hedefleme yöntemleri.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
 
-    <a href="/blog/immobilien-leads-2026.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Immobilien</span>
-            <span class="text-gray-500 text-xs">29.01.2026</span>
+      <a href="linkedin-b2b-marketing.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="de" data-title="LinkedIn B2B Marketing DACH Leads generieren">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Immobilien Leads Generieren 2026: Strategie für Makler</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Verkäufer-Leads statt Karteileichen gewinnen.</p>
-    </a>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">LinkedIn B2B Marketing für deutsche Firmen</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">LinkedIn als modernen Kaltakquise-Ersatz nutzen — Content-Strategie und Lead Generation.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-    <a href="/blog/zahnarzt-google-ads-hwg.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Gesundheit</span>
-            <span class="text-gray-500 text-xs">29.01.2026</span>
+      <a href="b2b-lead-generierung-dach-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="de" data-title="B2B Lead Generierung DACH 2026 Strategie">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
         </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Google Ads für Zahnärzte: Was ist erlaubt (HWG)?</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Heilmittelwerbegesetz und Google Ads: Die Regeln.</p>
-    </a>
-                
-    <a href="/blog/nakliyat-musteri-rehberi.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / Sektörel Rehber</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Almanya'da Nakliyat Firmaları İçin Müşteri Bulma Rehberi 2025</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Nakliyat firmaları için Google Ads ve SEO taktikleri.</p>
-    </a>
-    
-    <a href="/blog/google-ads-kosten-2025.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Google Ads</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Google Ads Kosten 2025: Was kostet ein Neukunde wirklich?</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Was kostet ein Neukunde wirklich?</p>
-    </a>
-    
-    <a href="/blog/insaat-sirketleri-pazarlama.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / İnşaat</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Alman Pazarında Türk İnşaat Şirketleri Nasıl Markalaşır?</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Büyük proje bulma taktikleri.</p>
-    </a>
-    
-    <a href="/blog/dis-hekimleri-hasta-bulma.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / Sağlık</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Almanya'da Türk Diş Hekimleri İçin Hasta Bulma Stratejileri</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Daha fazla implant ve estetik hastası bulun.</p>
-    </a>
-    
-    <a href="/blog/restoran-ciro-artirma.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / Gastro</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Restoranınızın Google Puanını Yükselterek Ciro Artırma</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Masa doluluk oranını artırın.</p>
-    </a>
-    
-    <a href="/blog/emlakci-lead-toplama.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / Emlak</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Emlakçılar İçin Dijital Portföy Yönetimi ve Lead Toplama</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Satılık portföyünüzü genişletin.</p>
-    </a>
-    
-    <a href="/blog/guzellik-merkezi-reklam.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">tr / Güzellik</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition">Güzellik Merkezleri İçin Instagram ve Google Ads Kombinasyonu</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Instagram ve Google Ads ile randevu.</p>
-    </a>
-    
-    <a href="/blog/marketing-for-expats-germany.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-bold uppercase">en / Business</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">Digital Marketing Guide for Expats in Germany 2025</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">How to grow your business as an expat.</p>
-    </a>
-    
-    <a href="/blog/real-estate-leads-germany.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-bold uppercase">en / Real Estate</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">How to Find Property Sellers in Berlin (For Agents)</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Finding property sellers in competitive markets.</p>
-    </a>
-    
-    <a href="/blog/dentist-marketing-expats.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-bold uppercase">en / Health</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent transition">Attracting International Patients to Your Dental Practice</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Attracting international patients.</p>
-    </a>
-    
-    <a href="/blog/seo-oder-google-ads.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Strategy</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">SEO oder Google Ads? Was ist besser für KMUs?</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Vergleich für KMUs.</p>
-    </a>
-    
-    <a href="/blog/local-seo-tipps.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Local SEO</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Google Maps Ranking verbessern: 3 Einfache Tipps</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">3 Tipps für mehr Sichtbarkeit.</p>
-    </a>
-    
-    <a href="/blog/website-conversion-killer.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Web Design</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Warum Ihre Website keine Kunden bringt (Top 3 Fehler)</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Warum Besucher nicht kaufen.</p>
-    </a>
-    
-    <a href="/blog/fachkraefte-finden-social-media.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Social Media</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Fachkräftemangel? Mitarbeiter finden über Social Media</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Recruiting über Instagram & Facebook.</p>
-    </a>
-    
-    <a href="/blog/immobilien-akquise-online.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Immobilien</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Immobilienmarketing 2025: Eigentümer online akquirieren</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Objekte finden mit Ads.</p>
-    </a>
-    
-    <a href="/blog/gastro-reservierung-automatisieren.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Gastro</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Tischreservierungen automatisieren: Schluss mit dem Telefon</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Mehr Gäste, weniger Stress.</p>
-    </a>
-    
-    <a href="/blog/kosmetik-neukunden.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Beauty</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Neukundengewinnung für Kosmetikstudios: Qualität vor Quantität</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Premium Kunden gewinnen.</p>
-    </a>
-    
-    <a href="/blog/google-ads-quality-score.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Google Ads</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">Google Ads Quality Score verstehen und Kosten senken</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Kosten senken bei Ads.</p>
-    </a>
-    
-    <a href="/blog/linkedin-b2b-marketing.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / B2B</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">B2B Marketing auf LinkedIn für deutsche Firmen</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">B2B Kunden finden.</p>
-    </a>
-    
-    <a href="/blog/ki-im-marketing.html" class="glass rounded-3xl p-6 transition-all duration-300 card-hover group block">
-        <div class="flex justify-between items-start mb-4">
-            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-xs font-bold uppercase">de / Trends</span>
-            <span class="text-gray-500 text-xs">27.01.2026</span>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-secondary transition">KI im Marketing 2025: Nutzen für kleine Unternehmen</h3>
-        <p class="text-sm text-gray-400 line-clamp-3">Vorteile für KMUs.</p>
-    </a>
-    
-            </div>
-        </div>
-    </main>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">B2B Lead-Generierung DACH 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Nachhaltige B2B-Leads im deutschsprachigen Raum gewinnen — Google, LinkedIn & Co.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
 
-    <footer class="py-8 text-center text-gray-500 border-t border-white/10">
-        <p>© 2025 Digital Ad Expert</p>
-    </footer>
+      <a href="almanya-b2b-lead-generation-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="tr" data-title="Almanya B2B Lead Generation 2026 Türk Şirketleri">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Almanya'da B2B Lead Generation 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Almanya pazarında Türk şirketleri için B2B müşteri edinme stratejileri.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="fachkraefte-finden-social-media.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="de" data-title="Fachkräfte finden Social Media Recruiting Employer Branding">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Fachkräfte über Social Media finden</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Social Recruiting und Employer Branding auf Instagram & LinkedIn — praktische Tipps.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="marketing-for-expats-germany.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="social" data-lang="en" data-title="Marketing for Expats Germany Business English">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-secondary/20 text-secondary px-2 py-0.5 rounded-full text-xs font-bold">Social & B2B</span>
+          <span class="lang-en px-2 py-0.5 rounded-full text-xs font-semibold">🇬🇧 EN</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Marketing for Expat Businesses in Germany</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">How expat-owned businesses can win customers in Germany with digital marketing.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Read more →</span>
+      </a>
+
+      <!-- ======================== KI & WEB ======================== -->
+      <a href="ki-im-marketing.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="ki" data-lang="de" data-title="KI im Marketing Chancen Risiken AI Tools 2026">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/15 text-primary px-2 py-0.5 rounded-full text-xs font-bold" style="background:rgba(139,92,246,0.2);color:#a78bfa;">KI & Web</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">KI im Marketing: Chancen & Risiken 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Welche KI-Tools sich wirklich lohnen und worauf Sie achten sollten.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="website-conversion-killer.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="ki" data-lang="de" data-title="Website Conversion Killer Fehler Optimierung CRO">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/15 text-primary px-2 py-0.5 rounded-full text-xs font-bold" style="background:rgba(139,92,246,0.2);color:#a78bfa;">KI & Web</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Website Conversion Killer: 5 versteckte Fehler</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Diese Website-Fehler kosten Sie täglich Kunden — und wie Sie sie beheben.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="website-kunden-verlieren-5-fehler.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="ki" data-lang="de" data-title="Website Kunden verlieren 5 Fehler keine Anfragen">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/15 text-primary px-2 py-0.5 rounded-full text-xs font-bold" style="background:rgba(139,92,246,0.2);color:#a78bfa;">KI & Web</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Warum Ihre Website keine Kunden bringt: 5 Fehler</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Kritische Website-Fehler und ihre Lösungen für KMU in Deutschland.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="website-musteri-kaciriyor-5-hata.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="ki" data-lang="tr" data-title="Web Sitesi Müşteri Kaçırıyor 5 Hata Dönüşüm">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-primary/15 text-primary px-2 py-0.5 rounded-full text-xs font-bold" style="background:rgba(139,92,246,0.2);color:#a78bfa;">KI & Web</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-secondary transition leading-snug">Web Siteniz Müşteri Kaçırıyor: 5 Kritik Hata</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Web sitenizin müşteri kaybettirdiği 5 kritik hata ve çözümleri.</p>
+        <span class="text-secondary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <!-- ======================== SEKTÖREN ======================== -->
+      <!-- Zahnarzt / Diş / Dentist -->
+      <a href="zahnarzt-google-ads-hwg-guide.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Zahnarzt Google Ads HWG Guide Heilmittelwerbegesetz verboten erlaubt">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gesundheit</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Zahnarzt Google Ads: HWG-Guide 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Komplettanleitung: Was Zahnärzte in Google Ads schreiben dürfen — und was zur Abmahnung führt.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="zahnarzt-google-ads-hwg.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Zahnarzt Google Ads HWG Falle verbotene Wörter">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gesundheit</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Google Ads für Zahnärzte: Die HWG-Falle</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Verbotene Wörter und erlaubte Alternativen für Zahnarzt-Werbung in Deutschland.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="dis-hekimleri-hasta-bulma.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Diş Hekimleri Hasta Bulma Almanya Google Ads SEO">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Sağlık</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Almanya'da Diş Hekimleri İçin Hasta Bulma</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Türk diş hekimlerinin Google Ads ve lokal SEO ile daha fazla hasta kazanması.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="dis-klinikleri-google-ads-yasaklari.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Diş Klinikleri Google Ads Yasakları HWG çözümler">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Sağlık</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Diş Klinikleri İçin Google Ads Yasakları</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">HWG kapsamında neler yasak ve yasal alternatif reklam stratejileri neler?</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="dentist-marketing-expats.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="en" data-title="Dentist Marketing Expats Germany English Speaking Patients">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sector: Health</span>
+          <span class="lang-en px-2 py-0.5 rounded-full text-xs font-semibold">🇬🇧 EN</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Dentist Marketing for Expats in Germany</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">How dentists attract English-speaking expat patients with Google Ads.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Read more →</span>
+      </a>
+
+      <a href="physiotherapie-praxis-marketing.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Physiotherapie Praxis Marketing Patienten Google Ads">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gesundheit</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Physiotherapie Marketing 2026: Mehr Patienten</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Privatpatienten gewinnen mit Google Ads und Local SEO — HWG-konform.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="friseur-salon-marketing-deutschland.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Friseur Salon Marketing Deutschland Neukunden Google Instagram">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-rose-500/15 text-rose-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Beauty</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Friseur Marketing 2026: Mehr Neukunden</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Google, Instagram und Bewertungsmanagement für Friseursalons in Deutschland.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <!-- Gastro -->
+      <a href="gastro-reservierung-automatisieren.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Gastro Reservierung automatisieren Restaurant Online Buchung">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-amber-500/15 text-amber-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gastro</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Gastro: Reservierungen automatisieren</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Online-Buchung und Marketing für Restaurants — mehr Gäste ohne mehr Aufwand.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="restoran-ciro-artirma.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Restoran Ciro Artırma Google Haritalar Müşteri">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-amber-500/15 text-amber-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gastro</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Restoran Cirosunu Artırma Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Google Haritalar puanı ve lokal reklamlarla restoran müşterisi kazanma.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="donerci-ciro-artirma-taktikleri.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Dönerci Ciro Artırma Taktikler Google Haritalar Imbiss">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-amber-500/15 text-amber-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Gastro</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Dönerci Cirosunu %30 Artıran Taktikler</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Google Haritalar ve öğle saati Google Ads ile dönerci büyütme rehberi.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <!-- Kosmetik / Güzellik -->
+      <a href="kosmetik-neukunden.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Kosmetikstudio Neukunden Google Ads Social Media Beauty">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-pink-500/15 text-pink-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Beauty</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Kosmetikstudio: Mehr Neukunden gewinnen</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Social Media und Google Ads für Kosmetik und Beauty — ohne Rabattschlachten.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="guzellik-merkezi-reklam.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Güzellik Merkezi Reklam Google Ads Instagram Müşteri">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-pink-500/15 text-pink-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Beauty</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Güzellik Merkezi Reklam Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Instagram ve Google Ads ile güzellik merkezine hazır müşteri çekme.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="guzellik-merkezi-instagram-google-ads.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Güzellik Merkezi Instagram Google Ads Karşılaştırma Hibrit">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-pink-500/15 text-pink-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Beauty</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Güzellik: Instagram mı, Google Ads mi?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">İki kanalın karşılaştırması ve en başarılı salonların hibrit stratejisi.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <!-- Immobilien / Emlak -->
+      <a href="immobilien-leads-2026.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Immobilien Leads 2026 Makler Eigentümer Wertermittlung">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Immobilien</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Immobilien-Leads 2026: Der Online-Trick</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Wie Makler über Google Ads Verkäufer-Leads gewinnen — nicht nur Mietanfragen.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="immobilien-akquise-online.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Immobilien Akquise Online Makler digitale Strategie">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Immobilien</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Immobilien-Akquise online: So geht's 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Digitale Objektakquise für Makler ohne Kaltakquise — Wertermittlung als Lead-Magnet.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="emlakci-lead-toplama.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Emlakçı Lead Toplama Almanya Satıcı Bulmak Google Ads">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Emlak</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Almanya'da Emlakçı Lead Toplama Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Satıcı bulmak için Google Ads ve ücretsiz ev değerleme stratejisi.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="real-estate-leads-germany.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="en" data-title="Real Estate Leads Germany 2026 Google Ads Agents">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full text-xs font-bold">Sector: Real Estate</span>
+          <span class="lang-en px-2 py-0.5 rounded-full text-xs font-semibold">🇬🇧 EN</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Real Estate Leads in Germany 2026</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">How real estate agents generate quality seller leads online in Germany.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Read more →</span>
+      </a>
+
+      <!-- Umzug / Nakliyat -->
+      <a href="bueroumzug-firmenkunden-finden.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Büroumzug Firmenkunden finden Gewerbe B2B Umzug">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-teal-500/15 text-teal-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Umzug</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Büroumzug: Lukrative Firmenkunden gewinnen</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">LinkedIn, Google Ads und Landing Pages speziell für Gewerbeumzüge.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="umzugskosten-2026-guide.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Umzugskosten 2026 Guide Preise Transparenz Umzugsfirma">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-teal-500/15 text-teal-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Umzug</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Umzugskosten 2026: Was ist fair?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Preisvergleich und wie Umzugsfirmen mit Transparenz mehr Aufträge gewinnen.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="umzugsunternehmen-marketing-winter.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="de" data-title="Umzugsunternehmen Marketing Winter Nebensaison Aufträge">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-teal-500/15 text-teal-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Umzug</span>
+          <span class="lang-de px-2 py-0.5 rounded-full text-xs font-semibold">🇩🇪 DE</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Umzug im Winter: Marketing-Taktiken</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Wie Umzugsfirmen auch in der Nebensaison volle Auftragsbücher haben.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Weiterlesen →</span>
+      </a>
+
+      <a href="nakliyat-musteri-rehberi.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Nakliyat Firması Müşteri Rehberi Google Ads SEO">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-teal-500/15 text-teal-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Nakliyat</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Nakliyat Firması İçin Müşteri Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Google Ads ve SEO ile nakliyat müşterisi çekme — negatif kelime stratejisi.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="ofis-tasima-kurumsal-musteri.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="Ofis Taşıma Kurumsal Müşteri B2B Nakliyat LinkedIn">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-teal-500/15 text-teal-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: Nakliyat</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">Ofis Taşımada Kurumsal Müşteri Bulma</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">B2B nakliyat müşterisi için LinkedIn ve Google Ads stratejisi.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <!-- Handwerker / İnşaat -->
+      <a href="insaat-tadilat-musteri-bulma.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="İnşaat Tadilat Müşteri Bulma Google Ads Handwerker">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-orange-500/15 text-orange-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: İnşaat</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">İnşaat & Tadilat: Müşteri Bulma Rehberi</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Google Ads ile acil tadilat ve onarım müşterisi çekme — güven inşa etme.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+      <a href="insaat-sirketleri-pazarlama.html" class="article-card card glass rounded-2xl p-5 block group" data-cat="sektor" data-lang="tr" data-title="İnşaat Şirketleri Pazarlama Dijital Almanya Marka">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="bg-orange-500/15 text-orange-400 px-2 py-0.5 rounded-full text-xs font-bold">Sektör: İnşaat</span>
+          <span class="lang-tr px-2 py-0.5 rounded-full text-xs font-semibold">🇹🇷 TR</span>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2 group-hover:text-primary transition leading-snug">İnşaat Şirketleri İçin Dijital Pazarlama</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Almanya'da inşaat markası oluşturmanın ve büyük projeleri kapmanın yolları.</p>
+        <span class="text-primary text-xs font-semibold mt-3 inline-block">Devamını oku →</span>
+      </a>
+
+    </div><!-- /articles-grid -->
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-10 border-t border-white/5 px-4">
+  <div class="container mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+    <p>© 2026 <a href="/de/" class="hover:text-white transition font-semibold">Digital Ad Expert</a></p>
+    <div class="flex gap-5">
+      <a href="/de/impressum.html" class="hover:text-white transition">Impressum</a>
+      <a href="/de/datenschutz.html" class="hover:text-white transition">Datenschutz</a>
+      <a href="/de/" class="hover:text-white transition">← Ana Sayfa</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const cards = document.querySelectorAll('.article-card');
+  const btns  = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('search-input');
+  const noResults = document.getElementById('no-results');
+  const grid = document.getElementById('articles-grid');
+
+  // Kategori sayaclari
+  const cats = ['google-ads','seo','social','ki','sektor'];
+  document.getElementById('count-all').textContent = cards.length;
+  cats.forEach(c => {
+    const el = document.getElementById('count-' + c);
+    if(el) el.textContent = document.querySelectorAll('[data-cat="'+c+'"]').length;
+  });
+
+  let activeFilter = 'all';
+  let searchTerm = '';
+
+  function applyFilters() {
+    let visible = 0;
+    cards.forEach(card => {
+      const catMatch = activeFilter === 'all' || card.dataset.cat === activeFilter;
+      const searchMatch = !searchTerm ||
+        card.dataset.title.toLowerCase().includes(searchTerm) ||
+        card.querySelector('h3').textContent.toLowerCase().includes(searchTerm) ||
+        (card.querySelector('p') && card.querySelector('p').textContent.toLowerCase().includes(searchTerm));
+
+      if(catMatch && searchMatch) {
+        card.classList.remove('hidden');
+        visible++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchTerm = searchInput.value.trim().toLowerCase();
+    applyFilters();
+  });
+})();
+</script>
+
 </body>
 </html>
