@@ -43,29 +43,95 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:url" content="https://digitaladexpert.de/de/">
     
-    <!-- Schema.org JSON-LD (Google'ın seni tanıması için kimlik kartı) -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MarketingAgency",
+      "@type": ["LocalBusiness", "MarketingAgency", "ProfessionalService"],
       "name": "Digital Ad Expert",
-      "image": "https://digitaladexpert.de/assets/logo.png",
       "@id": "https://digitaladexpert.de",
       "url": "https://digitaladexpert.de/de/",
-      "telephone": "",
+      "logo": "https://digitaladexpert.de/assets/logo.svg",
+      "image": "https://digitaladexpert.de/assets/og-image.png",
+      "description": "Zertifizierter Google Ads Expert & SEO Agentur in Deutschland. Maßgeschneiderte Performance Marketing Strategien für KMU im DACH-Raum.",
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
         "addressCountry": "DE"
       },
+      "areaServed": [
+        { "@type": "Country", "name": "Deutschland" },
+        { "@type": "Country", "name": "Österreich" },
+        { "@type": "Country", "name": "Schweiz" }
+      ],
+      "knowsLanguage": ["de", "en", "tr"],
       "founder": {
         "@type": "Person",
-        "name": "Yiğit Yıldız"
+        "name": "Yiğit Yıldız",
+        "jobTitle": "Google Ads & SEO Experte",
+        "url": "https://digitaladexpert.de/de/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Management",
+              "description": "Professionelle Google Ads Kampagnenverwaltung mit messbarem ROAS für KMU im DACH-Raum."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Suchmaschinenoptimierung (SEO)",
+              "description": "Nachhaltige SEO-Strategien zur Steigerung der organischen Sichtbarkeit in Google."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads (Facebook & Instagram)",
+              "description": "Zielgerichtete Social-Media-Werbung auf Facebook und Instagram für maximale Reichweite."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Webdesign & Landing Pages",
+              "description": "Conversion-optimierte Webseiten und Landing Pages für mehr Anfragen und Umsatz."
+            }
+          }
+        ]
       },
       "sameAs": [
         "https://www.instagram.com/digitalexpertde"
-      ],
-      "description": "Zertifizierter Google Ads Expert & SEO Agentur in Deutschland. Maßgeschneiderte Performance Marketing Strategien für KMU."
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yiğit Yıldız",
+      "jobTitle": "Certified Google Ads & SEO Expert",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Digital Ad Expert",
+        "url": "https://digitaladexpert.de"
+      },
+      "url": "https://digitaladexpert.de/de/",
+      "knowsAbout": ["Google Ads", "SEO", "Performance Marketing", "Meta Ads", "Local SEO", "DACH Marketing"],
+      "sameAs": [
+        "https://www.instagram.com/digitalexpertde"
+      ]
     }
     </script>
 

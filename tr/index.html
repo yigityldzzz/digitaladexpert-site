@@ -47,20 +47,71 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "MarketingAgency", "ProfessionalService"],
       "name": "Digital Ad Expert",
-      "image": "https://digitaladexpert.de/assets/logo.png",
-      "url": "https://digitaladexpert.de",
-      "description": "Almanya'da hizmet veren sertifikalı Google Ads ve SEO uzmanı. KOBİ'ler için dijital pazarlama ve web tasarım çözümleri.",
+      "@id": "https://digitaladexpert.de",
+      "url": "https://digitaladexpert.de/tr/",
+      "logo": "https://digitaladexpert.de/assets/logo.svg",
+      "image": "https://digitaladexpert.de/assets/og-image.png",
+      "description": "Almanya'da sertifikalı Google Ads ve SEO uzmanı. DACH bölgesindeki KOBİ'ler için ölçülebilir büyüme sağlayan dijital pazarlama stratejileri.",
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
         "addressCountry": "DE"
       },
-      "priceRange": "$$",
-      "email": "info@digitaladexpert.de",
+      "areaServed": [
+        { "@type": "Country", "name": "Almanya" },
+        { "@type": "Country", "name": "Avusturya" },
+        { "@type": "Country", "name": "İsviçre" }
+      ],
+      "knowsLanguage": ["de", "en", "tr"],
+      "founder": {
+        "@type": "Person",
+        "name": "Yiğit Yıldız",
+        "jobTitle": "Google Ads ve SEO Uzmanı"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dijital Pazarlama Hizmetleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Yönetimi",
+              "description": "Almanya'daki KOBİ'ler için ölçülebilir ROAS hedefli Google Ads kampanya yönetimi."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO (Arama Motoru Optimizasyonu)",
+              "description": "Google'da organik görünürlüğü artırmak için sürdürülebilir SEO stratejileri."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads (Facebook & Instagram)",
+              "description": "Facebook ve Instagram'da maksimum erişim için hedefli sosyal medya reklamları."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Tasarım ve Landing Page",
+              "description": "Daha fazla müşteri ve satış için dönüşüm odaklı web siteleri ve landing page'ler."
+            }
+          }
+        ]
+      },
       "sameAs": [
-        "https://www.linkedin.com/",
-        "https://www.xing.com/"
+        "https://www.instagram.com/digitalexpertde"
       ]
     }
     </script>

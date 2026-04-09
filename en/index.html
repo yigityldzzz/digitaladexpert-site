@@ -47,20 +47,71 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["LocalBusiness", "MarketingAgency", "ProfessionalService"],
       "name": "Digital Ad Expert",
-      "image": "https://digitaladexpert.de/assets/logo.png",
-      "url": "https://digitaladexpert.de",
-      "description": "Certified Google Ads and SEO Expert for businesses in Germany. Specialized in Performance Marketing and Web Design with English support.",
+      "@id": "https://digitaladexpert.de",
+      "url": "https://digitaladexpert.de/en/",
+      "logo": "https://digitaladexpert.de/assets/logo.svg",
+      "image": "https://digitaladexpert.de/assets/og-image.png",
+      "description": "Certified Google Ads & SEO Expert in Germany. Tailored performance marketing strategies for SMBs and expat-owned businesses in the DACH region.",
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
         "addressCountry": "DE"
       },
-      "priceRange": "$$",
-      "email": "info@digitaladexpert.de",
+      "areaServed": [
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Austria" },
+        { "@type": "Country", "name": "Switzerland" }
+      ],
+      "knowsLanguage": ["de", "en", "tr"],
+      "founder": {
+        "@type": "Person",
+        "name": "Yiğit Yıldız",
+        "jobTitle": "Google Ads & SEO Expert"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Management",
+              "description": "Data-driven Google Ads campaigns with proven ROAS results for SMBs in Germany."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Search Engine Optimization (SEO)",
+              "description": "Sustainable SEO strategies to boost organic visibility in Google for the DACH market."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads (Facebook & Instagram)",
+              "description": "Targeted social media advertising on Facebook and Instagram for maximum reach."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Design & Landing Pages",
+              "description": "Conversion-optimized websites and landing pages to generate more leads and revenue."
+            }
+          }
+        ]
+      },
       "sameAs": [
-        "https://www.linkedin.com/",
-        "https://www.xing.com/"
+        "https://www.instagram.com/digitalexpertde"
       ]
     }
     </script>
