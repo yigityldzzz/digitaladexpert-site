@@ -43,29 +43,95 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:url" content="https://digitaladexpert.de/de/">
     
-    <!-- Schema.org JSON-LD (Google'ın seni tanıması için kimlik kartı) -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MarketingAgency",
+      "@type": ["LocalBusiness", "MarketingAgency", "ProfessionalService"],
       "name": "Digital Ad Expert",
-      "image": "https://digitaladexpert.de/assets/logo.png",
       "@id": "https://digitaladexpert.de",
       "url": "https://digitaladexpert.de/de/",
-      "telephone": "",
+      "logo": "https://digitaladexpert.de/assets/logo.svg",
+      "image": "https://digitaladexpert.de/assets/og-image.png",
+      "description": "Zertifizierter Google Ads Expert & SEO Agentur in Deutschland. Maßgeschneiderte Performance Marketing Strategien für KMU im DACH-Raum.",
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
         "addressCountry": "DE"
       },
+      "areaServed": [
+        { "@type": "Country", "name": "Deutschland" },
+        { "@type": "Country", "name": "Österreich" },
+        { "@type": "Country", "name": "Schweiz" }
+      ],
+      "knowsLanguage": ["de", "en", "tr"],
       "founder": {
         "@type": "Person",
-        "name": "Yiğit Yıldız"
+        "name": "Yiğit Yıldız",
+        "jobTitle": "Google Ads & SEO Experte",
+        "url": "https://digitaladexpert.de/de/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Marketing Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Management",
+              "description": "Professionelle Google Ads Kampagnenverwaltung mit messbarem ROAS für KMU im DACH-Raum."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Suchmaschinenoptimierung (SEO)",
+              "description": "Nachhaltige SEO-Strategien zur Steigerung der organischen Sichtbarkeit in Google."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads (Facebook & Instagram)",
+              "description": "Zielgerichtete Social-Media-Werbung auf Facebook und Instagram für maximale Reichweite."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Webdesign & Landing Pages",
+              "description": "Conversion-optimierte Webseiten und Landing Pages für mehr Anfragen und Umsatz."
+            }
+          }
+        ]
       },
       "sameAs": [
         "https://www.instagram.com/digitalexpertde"
-      ],
-      "description": "Zertifizierter Google Ads Expert & SEO Agentur in Deutschland. Maßgeschneiderte Performance Marketing Strategien für KMU."
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yiğit Yıldız",
+      "jobTitle": "Certified Google Ads & SEO Expert",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Digital Ad Expert",
+        "url": "https://digitaladexpert.de"
+      },
+      "url": "https://digitaladexpert.de/de/",
+      "knowsAbout": ["Google Ads", "SEO", "Performance Marketing", "Meta Ads", "Local SEO", "DACH Marketing"],
+      "sameAs": [
+        "https://www.instagram.com/digitalexpertde"
+      ]
     }
     </script>
 
@@ -839,6 +905,60 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Showcase Section -->
+    <section class="py-12 sm:py-20 relative border-t border-white/5">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10 sm:mb-14" data-aos="fade-up">
+                <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4 inline-block">Wissen & Strategie</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
+                    Aktuelle <span class="gradient-text">Blog-Artikel</span>
+                </h2>
+                <p class="text-gray-400 text-base sm:text-lg">Praxistipps zu Google Ads, SEO und Performance Marketing</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+                <a href="/blog/pmax-kampagnen-roi-maximieren-2026.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs font-bold uppercase">Google Ads</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">PMax Kampagnen: ROI maximieren 2026</h3>
+                    <p class="text-gray-400 text-sm">Performance Max Kampagnen richtig aufsetzen und Budget effizient einsetzen.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+                <a href="/blog/local-seo-google-maps-ranking-2026.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-bold uppercase">Local SEO</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">Google Maps Ranking 2026: Der Guide</h3>
+                    <p class="text-gray-400 text-sm">So erscheint Ihr Unternehmen in den Top-3 der Google Maps Ergebnisse.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+                <a href="/blog/ki-content-erstellung-seo-2026.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-xs font-bold uppercase">KI & SEO</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">KI-gestützte Content-Erstellung für SEO</h3>
+                    <p class="text-gray-400 text-sm">Wie KI-Tools die SEO-Content-Produktion 2026 revolutionieren.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+                <a href="/blog/meta-ads-trends-2026-dach.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs font-bold uppercase">Meta Ads</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">Meta Ads Trends 2026 im DACH-Raum</h3>
+                    <p class="text-gray-400 text-sm">Facebook & Instagram Ads: Was 2026 wirklich funktioniert.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+                <a href="/blog/b2b-lead-generierung-dach-2026.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-bold uppercase">B2B</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">B2B Lead Generierung DACH 2026</h3>
+                    <p class="text-gray-400 text-sm">Strategien zur nachhaltigen B2B Lead Generation im deutschsprachigen Raum.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+                <a href="/blog/zahnarzt-google-ads-hwg-guide.html" class="glass rounded-2xl p-6 card-hover transition block group">
+                    <span class="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-xs font-bold uppercase">Praxismarketing</span>
+                    <h3 class="text-lg font-bold text-white mt-3 mb-2 group-hover:text-primary transition">Zahnarzt Google Ads: HWG-konform werben</h3>
+                    <p class="text-gray-400 text-sm">Was Zahnärzte in Google Ads schreiben dürfen — und was zur Abmahnung führt.</p>
+                    <span class="text-primary text-sm font-semibold mt-4 inline-block">Weiterlesen →</span>
+                </a>
+            </div>
+            <div class="text-center mt-10" data-aos="fade-up">
+                <a href="/blog/" class="inline-block border border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition">Alle Artikel ansehen →</a>
             </div>
         </div>
     </section>
