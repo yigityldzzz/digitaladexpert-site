@@ -668,7 +668,7 @@
         <div class="flex gap-2 sm:gap-3"><button onclick="rejectCookies()" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 border border-white/20 rounded-xl hover:bg-white/10 transition-colors text-xs sm:text-sm">Reddet</button><button onclick="acceptCookies()" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-primary to-secondary rounded-xl text-xs sm:text-sm font-semibold">Kabul Et</button></div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 600, once: true, offset: 50, disable: window.innerWidth < 640 ? 'phone' : false });
         const langBtn = document.getElementById('langBtn');
