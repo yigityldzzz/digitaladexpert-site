@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17910543951"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17910543951');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R5LP3YD04Z"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R5LP3YD04Z');gtag('config','AW-17910536535');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Our Tools | CRM Portal & StyleKit – Digital Ad Expert</title>
+<meta name="description" content="Discover Digital Ad Expert's proprietary tools: an Enterprise CRM Portal for transparent lead management and StyleKit — a Chrome extension for design token extraction.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://digitaladexpert.de/en/tools/">
+<meta property="og:title" content="Our Tools | CRM Portal & StyleKit – Digital Ad Expert">
+<meta property="og:description" content="Enterprise CRM Portal for transparent lead management and StyleKit Chrome Extension for design token extraction.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digitaladexpert.de/en/tools/">
+<link rel="alternate" hreflang="de" href="https://digitaladexpert.de/de/tools/" />
+<link rel="alternate" hreflang="en" href="https://digitaladexpert.de/en/tools/" />
+<link rel="alternate" hreflang="tr" href="https://digitaladexpert.de/tr/tools/" />
+<link rel="alternate" hreflang="x-default" href="https://digitaladexpert.de/" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#06b6d4',
+                    secondary: '#8b5cf6',
+                    accent: '#10b981',
+                    dark: { 900: '#0a0a0f', 800: '#12121a', 700: '#1a1a24', 600: '#24242f' }
+                },
+                fontFamily: {
+                    sans: ['Inter', 'system-ui', 'sans-serif'],
+                    heading: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+<style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0a0a0f; color: #e2e8f0; overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    .gradient-bg { background: linear-gradient(-45deg, #0a0a0f, #1a1a2e, #16213e, #0f3460); background-size: 400% 400%; animation: gradient 15s ease infinite; }
+    @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    @keyframes glow { from { box-shadow: 0 0 20px rgba(6,182,212,0.3); } to { box-shadow: 0 0 40px rgba(6,182,212,0.6); } }
+    .animate-glow { animation: glow 2s ease-in-out infinite alternate; }
+    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    .gradient-text { background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .blob { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; filter: blur(40px); }
+    .neon-btn { position: relative; overflow: hidden; transition: all 0.3s ease; }
+    .neon-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; }
+    .neon-btn:hover::before { left: 100%; }
+    .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    @media (hover: hover) { .card-hover:hover { transform: translateY(-8px) scale(1.01); } }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+    .mobile-menu.open { transform: translateX(0); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0f; }
+    ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 4px; }
+    ::selection { background: rgba(6,182,212,0.3); color: #fff; }
+    .tool-card-crm { background: linear-gradient(135deg, rgba(6,182,212,0.08) 0%, rgba(139,92,246,0.08) 100%); border: 1px solid rgba(6,182,212,0.2); }
+    .tool-card-stylekit { background: linear-gradient(135deg, rgba(139,92,246,0.08) 0%, rgba(16,185,129,0.08) 100%); border: 1px solid rgba(139,92,246,0.2); }
+    .feature-item { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .feature-item:last-child { border-bottom: none; }
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8641074364970025" crossorigin="anonymous"></script>
+</head>
+<body class="gradient-bg min-h-screen">
+
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="blob absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary/20 animate-float"></div>
+    <div class="blob absolute bottom-1/4 right-1/4 w-40 sm:w-56 md:w-80 h-40 sm:h-56 md:h-80 bg-secondary/20 animate-float" style="animation-delay:-3s;"></div>
+    <div class="blob absolute top-1/2 right-1/3 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-accent/20 animate-float" style="animation-delay:-5s;"></div>
+</div>
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 glass">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <a href="/en/" class="text-lg sm:text-xl font-bold gradient-text">Digital Ad Expert</a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="/en/#about" class="text-gray-300 hover:text-white transition-colors text-sm">About</a>
+                <a href="/en/#services" class="text-gray-300 hover:text-white transition-colors text-sm">Services</a>
+                <a href="/en/#portfolio" class="text-gray-300 hover:text-white transition-colors text-sm">Portfolio</a>
+                <a href="/en/process.html" class="text-gray-300 hover:text-white transition-colors text-sm">Process</a>
+                <a href="/blog/" class="text-gray-300 hover:text-white transition-colors text-sm">Blog</a>
+                <a href="/en/tools/" class="text-primary font-semibold transition-colors text-sm">Tools</a>
+                <a href="/en/#contact" class="text-gray-300 hover:text-white transition-colors text-sm">Contact</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <div class="relative">
+                    <button id="langBtn" class="glass flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/10 transition-all">
+                        <span class="text-lg">🇬🇧</span>
+                        <span class="hidden sm:inline font-medium text-sm text-white">EN</span>
+                        <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="langMenu" class="hidden absolute top-full right-0 mt-2 glass rounded-xl overflow-hidden min-w-[150px]">
+                        <a href="/de/tools/" class="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-all"><span class="text-lg">🇩🇪</span><span class="font-medium text-sm">Deutsch</span></a>
+                        <a href="/en/tools/" class="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-all bg-primary/20"><span class="text-lg">🇬🇧</span><span class="font-medium text-sm">English</span></a>
+                        <a href="/tr/tools/" class="flex items-center gap-3 px-4 py-3 hover:bg-white/10 transition-all"><span class="text-lg">🇹🇷</span><span class="font-medium text-sm">Türkçe</span></a>
+                    </div>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden glass p-2 rounded-xl">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+<div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 max-w-[80vw] glass z-50 md:hidden">
+    <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+            <span class="text-lg font-bold gradient-text">Menu</span>
+            <button id="closeMobileMenu" class="p-2 hover:bg-white/10 rounded-xl transition-colors">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a href="/en/#about" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">About</a>
+            <a href="/en/#services" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">Services</a>
+            <a href="/en/#portfolio" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">Portfolio</a>
+            <a href="/en/process.html" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">Process</a>
+            <a href="/blog/" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">Blog</a>
+            <a href="/en/tools/" class="mobile-nav-link text-primary font-semibold py-3 border-b border-white/10">Tools</a>
+            <a href="/en/#contact" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-3 border-b border-white/10">Contact</a>
+        </nav>
+        <div class="mt-8">
+            <a href="/en/#contact" class="mobile-nav-link block w-full text-center neon-btn bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-xl font-semibold text-white">Free Consultation</a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="pt-32 pb-16 px-4 relative">
+    <div class="container mx-auto max-w-4xl text-center">
+        <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6" data-aos="fade-down">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span class="text-sm text-gray-300">Internally developed technology</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight" data-aos="fade-up">
+            <span class="text-white">Our</span><br>
+            <span class="gradient-text">own tools</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            We don't just build campaigns — we build the tools behind them. Two proprietary products that make our work and our clients' experience more efficient.
+        </p>
+    </div>
+</section>
+
+<!-- Tools Cards -->
+<section class="py-12 px-4 relative">
+    <div class="container mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- CRM Portal Card -->
+            <div class="tool-card-crm rounded-3xl p-8 sm:p-10 card-hover relative overflow-hidden" data-aos="fade-right">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/20 to-transparent rounded-bl-full pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-chart-network text-2xl text-primary"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-primary font-semibold uppercase tracking-widest mb-1">Enterprise</div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">CRM Portal</h2>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                    Our proprietary Enterprise CRM Portal gives clients 100% transparency over their campaigns, leads and performance data — in real-time, GDPR-compliant and without technical barriers.
+                </p>
+                <div class="space-y-0 mb-8">
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-primary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Real-Time Lead Tracking</div><div class="text-gray-500 text-xs mt-0.5">See every new lead instantly with source channel attribution</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-primary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Campaign Dashboard</div><div class="text-gray-500 text-xs mt-0.5">Google Ads, Meta & SEO performance in one unified view</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-primary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">GDPR-Compliant Lead Management</div><div class="text-gray-500 text-xs mt-0.5">All data stored securely on EU servers</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-primary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Monthly Performance Reports</div><div class="text-gray-500 text-xs mt-0.5">Auto-generated, clear and jargon-free</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-primary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Direct Communication</div><div class="text-gray-500 text-xs mt-0.5">Messages and updates without email chaos</div></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="text-xs bg-primary/10 text-primary px-3 py-1.5 rounded-full border border-primary/20">Clients Only</span>
+                    <span class="text-xs bg-white/5 text-gray-400 px-3 py-1.5 rounded-full border border-white/10">GDPR Compliant</span>
+                    <span class="text-xs bg-white/5 text-gray-400 px-3 py-1.5 rounded-full border border-white/10">EU Hosting</span>
+                </div>
+                <a href="/en/#contact" class="inline-flex items-center gap-2 neon-btn bg-gradient-to-r from-primary to-secondary px-6 py-3 rounded-xl font-semibold text-white text-sm animate-glow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    Request a Demo
+                </a>
+            </div>
+
+            <!-- StyleKit Card -->
+            <div class="tool-card-stylekit rounded-3xl p-8 sm:p-10 card-hover relative overflow-hidden" data-aos="fade-left">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/20 to-transparent rounded-bl-full pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-brands fa-chrome text-2xl text-secondary"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs text-secondary font-semibold uppercase tracking-widest mb-1">Chrome Extension</div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">StyleKit</h2>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                    StyleKit is a Chrome extension that extracts design tokens from any website — colors, typography, spacing, shadows — and exports them as a structured <code class="text-secondary bg-secondary/10 px-1 rounded">DESIGN.md</code> file.
+                </p>
+                <div class="space-y-0 mb-8">
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-secondary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Design Token Extraction</div><div class="text-gray-500 text-xs mt-0.5">Colors, fonts, spacing and shadows in one click</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-secondary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">DESIGN.md Export</div><div class="text-gray-500 text-xs mt-0.5">Structured markdown document ready for developers</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-secondary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">No Media Files Accessed</div><div class="text-gray-500 text-xs mt-0.5">CSS properties only — no images or videos</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-secondary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Free & Open Use</div><div class="text-gray-500 text-xs mt-0.5">For designers, developers and agencies</div></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-check text-secondary text-xs"></i></div>
+                        <div><div class="text-white font-medium text-sm">Works on Any Website</div><div class="text-gray-500 text-xs mt-0.5">One click, complete design analysis</div></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="text-xs bg-secondary/10 text-secondary px-3 py-1.5 rounded-full border border-secondary/20">Free</span>
+                    <span class="text-xs bg-white/5 text-gray-400 px-3 py-1.5 rounded-full border border-white/10">Chrome Extension</span>
+                    <span class="text-xs bg-white/5 text-gray-400 px-3 py-1.5 rounded-full border border-white/10">No Account Needed</span>
+                </div>
+                <a href="https://chromewebstore.google.com/search/StyleKit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 neon-btn bg-gradient-to-r from-secondary to-accent px-6 py-3 rounded-xl font-semibold text-white text-sm">
+                    <i class="fa-brands fa-chrome"></i>
+                    Open in Chrome Web Store
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why We Build Our Own Tools -->
+<section class="py-16 px-4 relative border-t border-white/5">
+    <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6" data-aos="fade-up">
+            <span class="gradient-text">Why we build our own tools</span>
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="100">
+            Existing tools often have gaps — too complex, too expensive or too inflexible. We build exactly what we and our clients actually need.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="0">
+                <div class="text-3xl mb-4">🎯</div>
+                <h3 class="text-white font-bold mb-2">Precision</h3>
+                <p class="text-gray-400 text-sm">Every feature was built for a concrete need — no bloat, no unnecessary complexity.</p>
+            </div>
+            <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-3xl mb-4">🔒</div>
+                <h3 class="text-white font-bold mb-2">Data Security</h3>
+                <p class="text-gray-400 text-sm">Full control over client data — no third-party, no data leaks, 100% GDPR compliant.</p>
+            </div>
+            <div class="glass rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-3xl mb-4">⚡</div>
+                <h3 class="text-white font-bold mb-2">Efficiency</h3>
+                <p class="text-gray-400 text-sm">Less manual work, more time for strategy — our tools automate the repetitive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-4 relative">
+    <div class="container mx-auto max-w-2xl text-center">
+        <div class="glass rounded-3xl p-10" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-white mb-4">Interested in the CRM Portal?</h2>
+            <p class="text-gray-400 mb-8">The portal is exclusively available to our clients. Start with a free analysis and get immediate access.</p>
+            <a href="/en/#contact" class="inline-flex items-center gap-2 neon-btn bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-xl font-bold text-white animate-glow">
+                <i class="fa-solid fa-rocket"></i>
+                Request Free Analysis
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 sm:py-12 border-t border-white/10">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
+            <div class="text-center sm:text-left"><h3 class="text-xl sm:text-2xl font-bold gradient-text mb-3 sm:mb-4">Digital Ad Expert</h3><p class="text-gray-400 text-sm sm:text-base">Your partner for digital growth, Google Ads and SEO in Germany.</p></div>
+            <div class="text-center sm:text-left"><h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Legal</h4><ul class="space-y-2 sm:space-y-3"><li><a href="/en/impressum.html" class="text-gray-400 hover:text-primary transition-colors text-sm sm:text-base">Legal Notice</a></li><li><a href="/en/datenschutz.html" class="text-gray-400 hover:text-primary transition-colors text-sm sm:text-base">Privacy Policy</a></li><li><a href="/en/tools/" class="text-gray-400 hover:text-primary transition-colors text-sm sm:text-base">Our Tools</a></li></ul></div>
+            <div class="text-center sm:text-left"><h4 class="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Social Media</h4><div class="flex gap-4 justify-center sm:justify-start"><a href="https://www.instagram.com/digitalexpertde" target="_blank" rel="noopener noreferrer" class="w-10 h-10 glass rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div></div>
+        </div>
+        <div class="text-center text-gray-500 pt-6 sm:pt-8 border-t border-white/10"><p class="text-sm sm:text-base">© 2025 Digital Ad Expert. All rights reserved.</p></div>
+    </div>
+</footer>
+
+<div id="cookieBanner" class="fixed bottom-0 left-0 right-0 sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-md glass sm:rounded-2xl p-4 sm:p-6 z-50 hidden">
+    <p class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">This website uses cookies. <a href="/en/datenschutz.html" class="text-primary hover:underline">Learn more</a></p>
+    <div class="flex gap-2 sm:gap-3">
+        <button onclick="rejectCookies()" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 border border-white/20 rounded-xl hover:bg-white/10 transition-colors text-xs sm:text-sm">Reject</button>
+        <button onclick="acceptCookies()" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-primary to-secondary rounded-xl text-xs sm:text-sm font-semibold">Accept</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 600, once: true, offset: 50, disable: window.innerWidth < 640 ? 'phone' : false });
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+    langBtn.addEventListener('click', function(e) { e.stopPropagation(); langMenu.classList.toggle('hidden'); });
+    document.addEventListener('click', function(e) { if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) { langMenu.classList.add('hidden'); } });
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    function openMobileMenu() { mobileMenu.classList.add('open'); mobileMenuOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenuFn() { mobileMenu.classList.remove('open'); mobileMenuOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    closeMobileMenu.addEventListener('click', closeMobileMenuFn);
+    mobileMenuOverlay.addEventListener('click', closeMobileMenuFn);
+    mobileNavLinks.forEach(link => { link.addEventListener('click', closeMobileMenuFn); });
+    if (!localStorage.getItem('cookieConsent')) { setTimeout(() => { document.getElementById('cookieBanner').classList.remove('hidden'); }, 2000); }
+    function acceptCookies() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').classList.add('hidden'); }
+    function rejectCookies() { localStorage.setItem('cookieConsent', 'rejected'); document.getElementById('cookieBanner').classList.add('hidden'); }
+</script>
+</body>
+</html>
