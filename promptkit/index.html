@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <title>PromptKit – AI Prompt Manager Chrome Extension</title>
+  <meta name="description" content="Save, organize & instantly inject prompts into ChatGPT, Claude, Gemini, Perplexity and Grok. The smartest AI prompt manager for Chrome. Free.">
+  <meta name="keywords" content="AI prompt manager, Chrome extension, ChatGPT prompts, Claude prompts, Gemini prompts, prompt organizer, AI productivity tool">
+  <meta name="author" content="Digital Ad Expert">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://promptkit.digitaladexpert.de/">
+
+  <meta property="og:title" content="PromptKit – AI Prompt Manager">
+  <meta property="og:description" content="Save, organize & instantly inject prompts into ChatGPT, Claude, Gemini, Perplexity and Grok.">
+  <meta property="og:url" content="https://promptkit.digitaladexpert.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://promptkit.digitaladexpert.de/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PromptKit – AI Prompt Manager">
+  <meta name="twitter:description" content="Save, organize & instantly inject prompts into ChatGPT, Claude, Gemini, Perplexity and Grok.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#06b6d4',
+            secondary: '#8b5cf6',
+            accent: '#10b981',
+          },
+          fontFamily: {
+            sans: ['-apple-system','BlinkMacSystemFont','Segoe UI','system-ui','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #0f0f1a;
+      --border: rgba(255,255,255,0.07);
+    }
+    body { background: var(--bg); }
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: all 0.3s ease;
+    }
+    .glass-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(6,182,212,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(6,182,212,0.1);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-green {
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(6,182,212,0.35);
+    }
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 99px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2));
+      border: 1px solid rgba(6,182,212,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #06b6d4;
+      flex-shrink: 0;
+    }
+    .popup-mockup {
+      background: #0a0a0f;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    .mockup-header {
+      background: linear-gradient(180deg, rgba(6,182,212,0.05) 0%, transparent 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mockup-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 0 12px 6px;
+    }
+    .mockup-card:first-child { margin-top: 8px; }
+    .cat-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .faq-item:last-child { border-bottom: none; }
+  </style>
+</head>
+<body class="text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
+    <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between h-14">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(139,92,246,0.2));border:1px solid rgba(6,182,212,0.3)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="url(#ng1)" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M2 17l10 5 10-5" stroke="url(#ng2)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12l10 5 10-5" stroke="url(#ng3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="ng1" x1="2" y1="2" x2="22" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+              <linearGradient id="ng2" x1="2" y1="12" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+              <linearGradient id="ng3" x1="2" y1="7" x2="22" y2="17" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="font-bold text-sm gradient-text">PromptKit</span>
+        <span class="text-xs font-bold text-white px-1.5 py-0.5 rounded" style="background:linear-gradient(135deg,#06b6d4,#8b5cf6);font-size:9px">FREE</span>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+        <a href="#features" class="hover:text-white transition-colors">Features</a>
+        <a href="#how-it-works" class="hover:text-white transition-colors">How it works</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        <a href="https://digitaladexpert.de" class="hover:text-white transition-colors">digitaladexpert.de</a>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/promptkit" target="_blank" class="btn-primary text-white text-sm font-semibold px-4 py-2 rounded-lg flex items-center gap-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Add to Chrome
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center justify-center pt-20 pb-16 overflow-hidden">
+    <div class="hero-glow" style="background:rgba(6,182,212,0.08);top:-100px;left:-100px"></div>
+    <div class="hero-glow" style="background:rgba(139,92,246,0.06);bottom:-100px;right:-100px"></div>
+
+    <div class="container mx-auto px-4 max-w-6xl relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: Copy -->
+        <div data-aos="fade-right" data-aos-duration="800">
+          <div class="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full mb-6">
+            <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span class="text-xs text-gray-400">Free Chrome Extension</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Your AI prompts,<br>
+            <span class="gradient-text">always ready.</span>
+          </h1>
+
+          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
+            Stop rewriting the same prompts. Save, organize and inject them into any AI platform in seconds — ChatGPT, Claude, Gemini, Perplexity, Grok.
+          </p>
+
+          <!-- Platform badges -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="platform-badge">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span> ChatGPT
+            </span>
+            <span class="platform-badge">
+              <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span> Claude
+            </span>
+            <span class="platform-badge">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Gemini
+            </span>
+            <span class="platform-badge">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Perplexity
+            </span>
+            <span class="platform-badge">
+              <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span> Grok
+            </span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://chromewebstore.google.com/detail/promptkit" target="_blank" class="btn-primary text-white font-bold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 text-base">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2a10 10 0 0 1 8.66 5H12" stroke="currentColor" stroke-width="1.5"/><path d="M3.34 17A10 10 0 0 1 3.34 7" stroke="currentColor" stroke-width="1.5"/><path d="M20.66 17H12a10 10 0 0 1-8.66-5" stroke="currentColor" stroke-width="1.5"/></svg>
+              Add to Chrome — Free
+            </a>
+            <a href="#how-it-works" class="glass text-gray-300 font-semibold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 text-base hover:border-white/20 transition-all">
+              See how it works
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <p class="text-xs text-gray-600 mt-4">No account needed. 100% free. Works offline.</p>
+        </div>
+
+        <!-- Right: Extension Mockup -->
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200" class="flex justify-center lg:justify-end">
+          <div class="popup-mockup w-full max-w-xs">
+            <!-- Mockup Header -->
+            <div class="mockup-header">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(139,92,246,0.2));border:1px solid rgba(6,182,212,0.3)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#06b6d4" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round"/><path d="M2 12l10 5 10-5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <span class="text-xs font-bold gradient-text">PromptKit</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                <span class="text-xs text-emerald-400">ChatGPT</span>
+              </div>
+            </div>
+            <!-- Search -->
+            <div class="px-3 pt-3 pb-2">
+              <div class="flex items-center gap-2 rounded-lg px-3 py-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07)">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span class="text-xs text-gray-600">Search prompts...</span>
+              </div>
+            </div>
+            <!-- Categories -->
+            <div class="flex gap-1.5 px-3 pb-2 overflow-x-hidden">
+              <span class="text-xs px-2.5 py-1 rounded-full font-medium" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(139,92,246,0.2));border:1px solid rgba(6,182,212,0.3);color:#06b6d4">All</span>
+              <span class="text-xs px-2.5 py-1 rounded-full text-gray-500" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)">Marketing</span>
+              <span class="text-xs px-2.5 py-1 rounded-full text-gray-500" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)">Coding</span>
+              <span class="text-xs px-2.5 py-1 rounded-full text-gray-500" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)">SEO</span>
+            </div>
+            <!-- Pinned label -->
+            <div class="flex items-center gap-1.5 px-3 pb-1">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="#64748b"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg>
+              <span class="text-xs text-gray-600 uppercase tracking-wider font-semibold" style="font-size:9px">Pinned</span>
+            </div>
+            <!-- Pinned Card -->
+            <div class="mockup-card" style="border-color:rgba(6,182,212,0.2);background:linear-gradient(135deg,rgba(6,182,212,0.04),rgba(139,92,246,0.03))">
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="cat-dot" style="background:#06b6d4"></span>
+                <span class="text-xs font-semibold text-white">Write a Product Description</span>
+              </div>
+              <p class="text-gray-500 mb-2" style="font-size:10px">Write a compelling product description for {{product_name}} targeting {{audience}}…</p>
+              <div class="flex gap-1.5">
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(6,182,212,0.12);color:#06b6d4;font-size:10px">Marketing</span>
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);color:#64748b;font-size:10px">ecommerce</span>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="mockup-card">
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="cat-dot" style="background:#8b5cf6"></span>
+                <span class="text-xs font-semibold text-white">Debug This Error</span>
+              </div>
+              <p class="text-gray-500 mb-2" style="font-size:10px">I'm getting this error in {{language}}: {{error_message}}. Explain and fix it…</p>
+              <div class="flex gap-1.5">
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(139,92,246,0.12);color:#8b5cf6;font-size:10px">Coding</span>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="mockup-card mb-3">
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="cat-dot" style="background:#f59e0b"></span>
+                <span class="text-xs font-semibold text-white">Meta Title & Description</span>
+              </div>
+              <p class="text-gray-500 mb-2" style="font-size:10px">Write SEO-optimized meta for {{topic}} with keyword {{keyword}}…</p>
+              <div class="flex gap-1.5">
+                <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(245,158,11,0.12);color:#f59e0b;font-size:10px">SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="border-y border-white/5 py-10">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div data-aos="fade-up" data-aos-delay="0">
+          <p class="text-3xl font-bold gradient-text mb-1">5</p>
+          <p class="text-gray-500 text-sm">AI Platforms</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <p class="text-3xl font-bold gradient-text mb-1">∞</p>
+          <p class="text-gray-500 text-sm">Prompts Saved</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <p class="text-3xl font-bold gradient-text mb-1">2s</p>
+          <p class="text-gray-500 text-sm">Find & Inject</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <p class="text-3xl font-bold gradient-text mb-1">100%</p>
+          <p class="text-gray-500 text-sm">Free Forever</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 relative">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full mb-4">
+          <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+          <span class="text-xs text-gray-400">Everything you need</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          Built for <span class="gradient-text">serious AI users</span>
+        </h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">Stop losing your best prompts. PromptKit keeps them organized and ready to fire.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon mb-4" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.5"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">One-click Inject</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Click any prompt and it's instantly typed into your AI chat input. No copy-paste, no friction.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="80">
+          <div class="feature-icon mb-4" style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">Dynamic Variables</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Use <code class="text-purple-400 text-xs">&#123;&#123;variable&#125;&#125;</code> placeholders. PromptKit asks you to fill them in before injecting.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="160">
+          <div class="feature-icon mb-4" style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">Instant Search</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Find any prompt in under 2 seconds. Press <kbd class="text-xs bg-white/10 px-1.5 py-0.5 rounded">⌘K</kbd> and start typing.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon mb-4" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">6 Categories</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Marketing, Coding, Writing, SEO, Email, Other. Filter by category or pin your most-used prompts.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="80">
+          <div class="feature-icon mb-4" style="background:rgba(236,72,153,0.12);border:1px solid rgba(236,72,153,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">Import & Export</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Backup your prompts as JSON. Switch devices or share your prompt library with your team instantly.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6" data-aos="fade-up" data-aos-delay="160">
+          <div class="feature-icon mb-4" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-bold text-white text-base mb-2">100% Private</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">All data stays in your browser. No account, no servers, no tracking. Your prompts never leave your device.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-20 border-t border-white/5">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+          Up and running in <span class="gradient-text-green">60 seconds</span>
+        </h2>
+        <p class="text-gray-400 text-lg">No setup, no account, no learning curve.</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-5" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <div>
+            <h3 class="font-bold text-white mb-1">Install from Chrome Web Store</h3>
+            <p class="text-gray-500 text-sm">Click "Add to Chrome" — it's free, one click, no sign-up required.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-5" data-aos="fade-up" data-aos-delay="80">
+          <div class="step-number">2</div>
+          <div>
+            <h3 class="font-bold text-white mb-1">Add your prompts (or load samples)</h3>
+            <p class="text-gray-500 text-sm">Click the PromptKit icon in your toolbar. Hit "New" to add a prompt, or go to Settings → Load Samples to start with 8 pre-built prompts.</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-5" data-aos="fade-up" data-aos-delay="160">
+          <div class="step-number">3</div>
+          <div>
+            <h3 class="font-bold text-white mb-1">Open any AI platform & inject</h3>
+            <p class="text-gray-500 text-sm">Go to ChatGPT, Claude or any supported AI. Open PromptKit, click your prompt — it's instantly typed into the chat box.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platforms -->
+  <section class="py-20 border-t border-white/5">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-3">Works on every major <span class="gradient-text">AI platform</span></h2>
+        <p class="text-gray-400">No matter where you do your AI work, PromptKit follows you.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div class="glass-card rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#10b981" fill-opacity="0.2"/><circle cx="12" cy="12" r="4" fill="#10b981"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-white">ChatGPT</p>
+          <p class="text-xs text-gray-600 mt-0.5">OpenAI</p>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay="60">
+          <div class="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f97316" fill-opacity="0.2"/><circle cx="12" cy="12" r="4" fill="#f97316"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-white">Claude</p>
+          <p class="text-xs text-gray-600 mt-0.5">Anthropic</p>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay="120">
+          <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#3b82f6" fill-opacity="0.2"/><circle cx="12" cy="12" r="4" fill="#3b82f6"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-white">Gemini</p>
+          <p class="text-xs text-gray-600 mt-0.5">Google</p>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay="180">
+          <div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#8b5cf6" fill-opacity="0.2"/><circle cx="12" cy="12" r="4" fill="#8b5cf6"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-white">Perplexity</p>
+          <p class="text-xs text-gray-600 mt-0.5">AI Search</p>
+        </div>
+        <div class="glass-card rounded-xl p-5 text-center" data-aos="fade-up" data-aos-delay="240">
+          <div class="w-10 h-10 rounded-full bg-gray-500/10 flex items-center justify-center mx-auto mb-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#6b7280" fill-opacity="0.2"/><circle cx="12" cy="12" r="4" fill="#6b7280"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-white">Grok</p>
+          <p class="text-xs text-gray-600 mt-0.5">xAI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 border-t border-white/5">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-3">Frequently asked <span class="gradient-text">questions</span></h2>
+      </div>
+      <div class="glass rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-item px-6 py-5">
+          <p class="font-semibold text-white mb-2">Is PromptKit really free?</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Yes, completely free. No premium plan, no trial period, no credit card. We built this as a productivity tool to help our community.</p>
+        </div>
+        <div class="faq-item px-6 py-5">
+          <p class="font-semibold text-white mb-2">Do my prompts sync across devices?</p>
+          <p class="text-gray-500 text-sm leading-relaxed">PromptKit uses Chrome's built-in sync storage, so your prompts automatically sync across all Chrome browsers where you're signed in.</p>
+        </div>
+        <div class="faq-item px-6 py-5">
+          <p class="font-semibold text-white mb-2">Is my data private?</p>
+          <p class="text-gray-500 text-sm leading-relaxed">100%. All prompts are stored locally in your browser (Chrome storage). We have no servers, no analytics on your data, no account system.</p>
+        </div>
+        <div class="faq-item px-6 py-5">
+          <p class="font-semibold text-white mb-2">What are {{variables}}?</p>
+          <p class="text-gray-500 text-sm leading-relaxed">You can write prompts with placeholders like <code class="text-purple-400">&#123;&#123;product_name&#125;&#125;</code>. When you click the prompt, PromptKit shows a form to fill in those values before injecting.</p>
+        </div>
+        <div class="faq-item px-6 py-5">
+          <p class="font-semibold text-white mb-2">Does it work with the free ChatGPT plan?</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Yes. PromptKit works with any ChatGPT tier — free, Plus, or Team. Same for all other supported platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 border-t border-white/5">
+    <div class="container mx-auto px-4 max-w-3xl text-center" data-aos="fade-up">
+      <div class="inline-flex items-center gap-2 glass px-3 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+        <span class="text-xs text-gray-400">Free Forever</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+        Ready to 10x your<br><span class="gradient-text">AI workflow?</span>
+      </h2>
+      <p class="text-gray-400 text-lg mb-8">Join thousands of professionals who never retype a prompt again.</p>
+      <a href="https://chromewebstore.google.com/detail/promptkit" target="_blank" class="btn-primary text-white font-bold px-8 py-4 rounded-xl inline-flex items-center gap-3 text-base">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2a10 10 0 0 1 8.66 5H12" stroke="currentColor" stroke-width="1.5"/><path d="M3.34 17A10 10 0 0 1 3.34 7" stroke="currentColor" stroke-width="1.5"/><path d="M20.66 17H12a10 10 0 0 1-8.66-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        Add PromptKit to Chrome — Free
+      </a>
+      <p class="text-xs text-gray-600 mt-4">Works on Chrome, Brave, Edge and all Chromium-based browsers.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-bold gradient-text text-sm">PromptKit</span>
+          <span class="text-gray-600 text-xs">by</span>
+          <a href="https://digitaladexpert.de" class="text-gray-500 text-xs hover:text-white transition-colors">Digital Ad Expert</a>
+        </div>
+        <div class="flex items-center gap-6 text-xs text-gray-600">
+          <a href="https://digitaladexpert.de/en/" class="hover:text-white transition-colors">Website</a>
+          <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="https://digitaladexpert.de/en/#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <p class="text-xs text-gray-700">© 2026 Digital Ad Expert. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 60, duration: 700 });
+  </script>
+</body>
+</html>
