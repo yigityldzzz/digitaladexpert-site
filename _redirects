@@ -1,7 +1,8 @@
 # Cloudflare Pages redirects
 
 # PromptKit subdomain rewrite
-https://promptkit.digitaladexpert.de/* /promptkit/:splat 200
+https://promptkit.digitaladexpert.de/ /promptkit/ 301
+https://promptkit.digitaladexpert.de/privacy /promptkit/privacy.html 301
 
 # Root path redirect to German (default)
 /  /de/  301
